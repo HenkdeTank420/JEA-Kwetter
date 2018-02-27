@@ -15,11 +15,15 @@ public class Message {
     private String Owner;
     private List<Account> Mentions;
     private List<Trend> Trends;
+    private String Text;
+    private List<Heart> Hearts;
 
-    public Message(String owner, List<Account> mentions, List<Trend> trends){
+    public Message(String owner, List<Account> mentions, List<Trend> trends, String text, List<Heart> hearts){
         this.Owner = owner;
         this.Mentions = mentions;
         this.Trends = trends;
+        this.Text = text;
+        this.Hearts = hearts;
     }
 
     public String getOwner() {
@@ -44,5 +48,21 @@ public class Message {
 
     public void setTrends(List<Trend> trends) {
         Trends = trends;
+    }
+
+    public String getText() {
+        return Text;
+    }
+
+    public void setText(String text) {
+        Text = text;
+    }
+
+    public List<Heart> getHearts() {
+        return Hearts;
+    }
+
+    public void setHearts(List<Heart> hearts) {
+        Hearts = hearts;
     }
 }
