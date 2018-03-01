@@ -6,7 +6,11 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class UserDaoColl {
 
-    CopyOnWriteArrayList<User> users = new CopyOnWriteArrayList<>();
+    CopyOnWriteArrayList<User> users;
+
+    public UserDaoColl(CopyOnWriteArrayList<User> users){
+        this.users = users;
+    }
 
     public void addUser(User user){
         users.add(user);
