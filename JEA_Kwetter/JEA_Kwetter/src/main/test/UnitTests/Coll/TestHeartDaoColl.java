@@ -1,4 +1,4 @@
-package UnitTests;
+package UnitTests.Coll;
 
 public class TestHeartDaoColl {
 }

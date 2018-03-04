@@ -1,6 +1,6 @@
-package UnitTests;
+package UnitTests.Coll;
 
-import dao.UserDaoColl;
+import dao.Coll.UserDaoColl;
 import domain.User;
 import org.junit.BeforeClass;
 import org.junit.Test;

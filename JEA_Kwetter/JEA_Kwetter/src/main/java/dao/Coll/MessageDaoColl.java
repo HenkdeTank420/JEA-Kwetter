@@ -1,4 +1,4 @@
-package dao;
+package dao.Coll;
 
 import domain.Message;
 
