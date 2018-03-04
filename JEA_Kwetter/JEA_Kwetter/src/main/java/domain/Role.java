@@ -1,8 +1,11 @@
 package domain;
 
+import javax.persistence.Entity;
+import java.io.Serializable;
 import java.util.List;
 
-public class Role {
+@Entity
+public class Role implements Serializable {
 
     private String Name;
     private List<Account> AccountsWithThisRole;

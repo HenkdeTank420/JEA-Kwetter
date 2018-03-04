@@ -1,14 +1,30 @@
 package domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.List;
 
-public class Account {
+@Entity
+public class Account implements Serializable{
 
+    @Id
+    @GeneratedValue
+    private Long Id;
+
+    @Column(unique = true)
     private String Username;
+
     private List<Account> Followers;
+
     private List<Account> Followees;
+
     private String Web;
+
     private String Location;
+
     private String Bio;
 
     public Account(String username, List<Account> followers, List<Account> followees, String web, String location, String bio){

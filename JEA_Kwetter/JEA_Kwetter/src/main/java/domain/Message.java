@@ -1,21 +1,26 @@
 package domain;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.List;
 
-public class Message {
+@Entity
+public class Message implements Serializable {
 
     @Id
     @GeneratedValue
     private Long Id;
-    @Column(unique = true)
 
     private String Owner;
+
     private List<Account> Mentions;
+
     private List<Trend> Trends;
+
     private String Text;
+
     private List<Heart> Hearts;
 
     public Message(String owner, List<Account> mentions, List<Trend> trends, String text, List<Heart> hearts){

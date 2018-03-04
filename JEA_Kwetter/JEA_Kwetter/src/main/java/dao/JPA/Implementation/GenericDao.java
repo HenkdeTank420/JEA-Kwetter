@@ -6,35 +6,36 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 
-public class GenericDao implements IGenericDao {
+public class GenericDao<T> implements IGenericDao<T> {
 
     @PersistenceContext(name = "Kwetter")
     protected EntityManager em;
 
-    private class<T> type;
+    private Class<T> type;
 
     @Override
-    public void add(Object object) {
-
+    public void add(T object) {
+        em.persist(object);
     }
 
     @Override
-    public void delete(Object object) {
-
+    public void delete(T object) {
+        em.remove(object);
     }
 
     @Override
-    public Object findById(int id) {
-        return null;
+    public T findById(int id) {
+        return em.find(type, id);
     }
 
     @Override
-    public Object findObject(Object object) {
-        return null;
+    public T findObject(T object) {
+        return em.find(type, object);
     }
 
     @Override
-    public ArrayList getAllObjects() {
+    public ArrayList<T> getAllObjects() {
+        em.createEntityGraph(type);
         return null;
     }
 }

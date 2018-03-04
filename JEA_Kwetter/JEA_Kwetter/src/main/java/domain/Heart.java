@@ -1,17 +1,19 @@
 package domain;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 
-public class Heart {
+@Entity
+public class Heart implements Serializable{
 
     @Id
     @GeneratedValue
     private Long Id;
-    @Column(unique = true)
 
     private Account Liker;
+
     private Message Liked;
 
     public Heart(Account liker, Message liked){
