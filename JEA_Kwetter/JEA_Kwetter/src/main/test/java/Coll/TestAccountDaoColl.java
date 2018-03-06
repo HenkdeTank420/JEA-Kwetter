@@ -1,4 +1,4 @@
-package UnitTests.Coll;
+package java.Coll;
 
 import dao.Coll.AccountDaoColl;
 import domain.Account;

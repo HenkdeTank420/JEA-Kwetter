@@ -1,4 +1,4 @@
-package UnitTests.Coll;
+package java.Coll;
 
 public class TestTrendDaoColl {
 }
