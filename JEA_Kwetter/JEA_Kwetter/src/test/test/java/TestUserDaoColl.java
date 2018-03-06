@@ -1,4 +1,4 @@
-package test.java.Coll;
+package test.java;
 
 import dao.Coll.UserDaoColl;
 import domain.User;

@@ -1,4 +1,4 @@
-package test.java.Coll;
+package test.java;
 
 public class TestTrendDaoColl {
 }
