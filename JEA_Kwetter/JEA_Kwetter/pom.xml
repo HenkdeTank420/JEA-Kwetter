@@ -35,6 +35,7 @@
         </dependency>
     </dependencies>
     <build>
+        <testSourceDirectory>/src/test/test/java</testSourceDirectory>
         <finalName>basic-jee</finalName>
     </build>
     <properties>
