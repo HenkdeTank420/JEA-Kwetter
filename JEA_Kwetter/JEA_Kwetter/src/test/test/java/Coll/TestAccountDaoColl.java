@@ -1,4 +1,4 @@
-package java.Coll;
+package test.java.Coll;
 
 import dao.Coll.AccountDaoColl;
 import domain.Account;
@@ -77,6 +77,8 @@ public class TestAccountDaoColl {
     @Test
     public void testGetAllFollowersOfAccount_ExcistingAccountWithoutFollowers_FoundEmptyList(){
         assertNull(accountDaoColl.getAllFollowersOfAccount("Thomas"));
+        //Vio fix pls
+        //I know but i didn't know how rn
     }
 
     @Test
