@@ -1,9 +1,6 @@
 package domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -17,8 +14,10 @@ public class Account implements Serializable{
     @Column(unique = true)
     private String Username;
 
+    @ManyToMany
     private List<Account> Followers;
 
+    @ManyToMany
     private List<Account> Followees;
 
     private String Web;

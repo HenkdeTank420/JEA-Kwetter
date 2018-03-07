@@ -3,6 +3,7 @@ package domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.List;
 
@@ -15,12 +16,15 @@ public class Message implements Serializable {
 
     private String Owner;
 
+    @OneToMany
     private List<Account> Mentions;
 
+    @OneToMany
     private List<Trend> Trends;
 
     private String Text;
 
+    @OneToMany
     private List<Heart> Hearts;
 
     public Message(String owner, List<Account> mentions, List<Trend> trends, String text, List<Heart> hearts){
@@ -29,6 +33,10 @@ public class Message implements Serializable {
         this.Trends = trends;
         this.Text = text;
         this.Hearts = hearts;
+    }
+
+    public Long getId() {
+        return Id;
     }
 
     public String getOwner() {
