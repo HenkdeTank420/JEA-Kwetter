@@ -26,6 +26,10 @@ public class Account implements Serializable{
 
     private String Bio;
 
+    public Account(){
+
+    }
+
     public Account(String username, List<Account> followers, List<Account> followees, String web, String location, String bio){
         this.Username = username;
         this.Followers = followers;
@@ -33,6 +37,14 @@ public class Account implements Serializable{
         this.Web = web;
         this.Location = location;
         this.Bio = bio;
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getUsername() {

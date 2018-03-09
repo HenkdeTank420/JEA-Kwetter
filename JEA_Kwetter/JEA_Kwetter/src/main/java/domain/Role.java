@@ -19,6 +19,10 @@ public class Role implements Serializable {
     @OneToMany
     private List<Account> AccountsWithThisRole;
 
+    public Role(){
+
+    }
+
     public Role(String name, List<Account> accountsWithThisRole){
         this.Name = name;
         this.AccountsWithThisRole = accountsWithThisRole;
@@ -26,6 +30,10 @@ public class Role implements Serializable {
 
     public long getId() {
         return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getName() {

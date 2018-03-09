@@ -27,6 +27,10 @@ public class Message implements Serializable {
     @OneToMany
     private List<Heart> Hearts;
 
+    public Message(){
+
+    }
+
     public Message(String owner, List<Account> mentions, List<Trend> trends, String text, List<Heart> hearts){
         this.Owner = owner;
         this.Mentions = mentions;
@@ -37,6 +41,10 @@ public class Message implements Serializable {
 
     public Long getId() {
         return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getOwner() {

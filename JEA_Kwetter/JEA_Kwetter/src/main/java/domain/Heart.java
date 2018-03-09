@@ -16,9 +16,21 @@ public class Heart implements Serializable{
 
     private Message Liked;
 
+    public Heart(){
+
+    }
+
     public Heart(Account liker, Message liked){
         this.Liker = liker;
         this.Liked = liked;
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public Account getLiker() {

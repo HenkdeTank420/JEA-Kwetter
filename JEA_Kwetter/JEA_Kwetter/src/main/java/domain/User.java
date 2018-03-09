@@ -19,9 +19,21 @@ public class User implements Serializable{
     @Column(name = "password")
     private String Password;
 
+    public User(){
+
+    }
+
     public User(String username, String password){
         this.Username = username;
         this.Password = password;
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getUsername() {
@@ -30,6 +42,10 @@ public class User implements Serializable{
 
     public void setUsername(String username) {
         Username = username;
+    }
+
+    public String getPassword() {
+        return Password;
     }
 
     public void setPassword(String password) {

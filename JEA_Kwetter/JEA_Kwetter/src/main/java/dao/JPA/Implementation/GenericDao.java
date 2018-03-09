@@ -1,21 +1,26 @@
 package dao.JPA.Implementation;
 
 import dao.JPA.Interface.IGenericDao;
+import dao.JPA.Interface.JPAKwetter;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 
+@Stateless
+@JPAKwetter
 public class GenericDao<T> implements IGenericDao<T> {
 
-    @PersistenceContext(name = "Kwetter")
+    @PersistenceContext(name = "KwetterPU")
     protected EntityManager em;
 
     private Class<T> type;
 
     @Override
-    public void add(T object) {
+    public T add(T object) {
         em.persist(object);
+        return object;
     }
 
     @Override
@@ -24,7 +29,7 @@ public class GenericDao<T> implements IGenericDao<T> {
     }
 
     @Override
-    public T findById(int id) {
+    public T findById(Long id) {
         return em.find(type, id);
     }
 
