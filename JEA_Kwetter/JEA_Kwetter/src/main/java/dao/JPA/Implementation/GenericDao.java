@@ -12,7 +12,7 @@ import java.util.ArrayList;
 @JPAKwetter
 public class GenericDao<T> implements IGenericDao<T> {
 
-    @PersistenceContext(name = "KwetterPU")
+    @PersistenceContext(unitName = "KwetterPU")
     protected EntityManager em;
 
     private Class<T> type;

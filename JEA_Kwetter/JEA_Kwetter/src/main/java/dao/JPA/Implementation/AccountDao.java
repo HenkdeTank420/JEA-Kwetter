@@ -15,7 +15,6 @@ public class AccountDao extends GenericDao<Account> implements IAccountDao{
         return null;
     }
 
-
     public ArrayList<Account> getAllFolloweesOfAccount(String userName) {
         return null;
     }

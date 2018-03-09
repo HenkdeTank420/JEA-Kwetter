@@ -1,14 +1,17 @@
 package domain;
 
+import javax.enterprise.context.Dependent;
+import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@Named
 public class Account implements Serializable{
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
     @Column(unique = true)
