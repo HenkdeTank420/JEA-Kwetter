@@ -14,7 +14,6 @@ public class MessageDao extends GenericDao<Message> implements IMessageDao {
         return null;
     }
 
-
     public Message findMessagesWithWordInText(String word) {
         return null;
     }
