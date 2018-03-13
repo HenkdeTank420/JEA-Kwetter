@@ -5,6 +5,7 @@ import domain.Account;
 import java.util.ArrayList;
 
 public interface IAccountDao extends IGenericDao<Account> {
+    Account findByName(String name);
 
     ArrayList<Account> getAllFollowersOfAccount(String userName);
 

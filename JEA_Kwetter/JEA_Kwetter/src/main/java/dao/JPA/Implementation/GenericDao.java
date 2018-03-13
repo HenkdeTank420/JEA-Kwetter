@@ -6,6 +6,7 @@ import dao.JPA.Interface.JPAKwetter;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.ArrayList;
 
 @Stateless
@@ -40,7 +41,7 @@ public class GenericDao<T> implements IGenericDao<T> {
 
     @Override
     public ArrayList<T> getAllObjects() {
-        em.createEntityGraph(type);
-        return null;
+        Query query = em.createQuery("SELECT a FROM Account a");
+        return new ArrayList<>(query.getResultList());
     }
 }

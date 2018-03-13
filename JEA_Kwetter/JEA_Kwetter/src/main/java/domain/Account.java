@@ -8,6 +8,8 @@ import java.util.List;
 
 @Entity
 @Named
+@NamedQueries({
+        @NamedQuery(name = "account.findByname", query = "SELECT a FROM Account a WHERE a.Username = :name")})
 public class Account implements Serializable{
 
     @Id

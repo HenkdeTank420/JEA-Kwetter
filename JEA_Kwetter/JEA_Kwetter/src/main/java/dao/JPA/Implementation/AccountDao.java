@@ -5,7 +5,9 @@ import dao.JPA.Interface.JPAKwetter;
 import domain.Account;
 
 import javax.ejb.Stateless;
+import javax.persistence.TypedQuery;
 import java.util.ArrayList;
+import java.util.List;
 
 @Stateless
 @JPAKwetter
@@ -17,6 +19,14 @@ public class AccountDao extends GenericDao<Account> implements IAccountDao{
 
     public ArrayList<Account> getAllFolloweesOfAccount(String userName) {
         return null;
+    }
+
+    @Override
+    public Account findByName(String name){
+        TypedQuery<Account> query = em.createNamedQuery("account.findByname", Account.class);
+        query.setParameter("name", name);
+        List<Account> result = query.getResultList();
+        return result.get(0);
     }
 
     @Override
