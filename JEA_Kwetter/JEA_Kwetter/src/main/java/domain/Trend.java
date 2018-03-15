@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "trend.findByname", query = "SELECT t FROM Trend t WHERE t.Name = :trendName")})
 public class Trend implements Serializable {
 
     @Id
@@ -15,7 +17,7 @@ public class Trend implements Serializable {
 
     public Trend(){}
 
-    public Trend( String name){
+    public Trend(String name){
         this.Name = name;
     }
 

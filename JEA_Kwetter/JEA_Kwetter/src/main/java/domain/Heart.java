@@ -1,20 +1,23 @@
 package domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "heart.getAllHeartsOfMessage", query = "SELECT h FROM Heart h WHERE h.Liked = :message"),
+        @NamedQuery(name = "heart.getAllAccountsThatHeartedOfMessage", query = "SELECT h.Liker FROM Heart h WHERE h.Liked = :message")
+})
 public class Heart implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
+    @ManyToOne
     private Account Liker;
 
+    @ManyToOne
     private Message Liked;
 
     public Heart(){

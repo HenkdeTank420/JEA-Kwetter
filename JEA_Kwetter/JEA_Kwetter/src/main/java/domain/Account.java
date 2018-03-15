@@ -99,4 +99,15 @@ public class Account implements Serializable{
     public void setBio(String bio) {
         Bio = bio;
     }
+
+    @ManyToOne(optional = false)
+    private Message messages;
+
+    public Message getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Message messages) {
+        this.messages = messages;
+    }
 }

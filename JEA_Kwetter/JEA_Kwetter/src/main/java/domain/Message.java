@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "message.findMessageByName", query = "SELECT m FROM Message m WHERE m.Owner = :name"),
+        @NamedQuery(name = "message.findMessageByName", query = "SELECT m FROM Message m WHERE m.Owner.Username = :name"),
         @NamedQuery(name = "message.findMessageByWord", query = "SELECT m FROM Message m WHERE m.Text = :word")})
 public class Message implements Serializable {
 
@@ -14,7 +14,8 @@ public class Message implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    private String Owner;
+    @ManyToOne
+    private Account Owner;
 
     @OneToMany
     private List<Account> Mentions;
@@ -31,7 +32,7 @@ public class Message implements Serializable {
 
     }
 
-    public Message(String owner, List<Account> mentions, List<Trend> trends, String text, List<Heart> hearts){
+    public Message(Account owner, List<Account> mentions, List<Trend> trends, String text, List<Heart> hearts){
         this.Owner = owner;
         this.Mentions = mentions;
         this.Trends = trends;
@@ -47,11 +48,11 @@ public class Message implements Serializable {
         Id = id;
     }
 
-    public String getOwner() {
+    public Account getOwner() {
         return Owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(Account owner) {
         Owner = owner;
     }
 

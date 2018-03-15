@@ -23,7 +23,7 @@ public class MessageDaoColl {
 
     public Message findMessagesOfAccount(String name){
         for(Message message : messages){
-            if(message.getOwner().contentEquals(name)){
+            if(message.getOwner().getUsername().contentEquals(name)){
                 return message;
             }
         }

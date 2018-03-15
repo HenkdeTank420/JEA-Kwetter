@@ -14,7 +14,7 @@ public class TrendRestTest extends BaseRestTest {
 
     @Test
     public void getTrendByName() {
-        given().when().get("/api/account/puppy").then()
+        given().when().get("/api/trend/puppy").then()
                 .body("name",equalTo("puppy"));
     }
 }

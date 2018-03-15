@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@NamedQuery(name = "role.accountsWithRole", query = "SELECT r.AccountsWithThisRole FROM Role r WHERE r.Name = :name")
+
 public class Role implements Serializable {
 
     @Id

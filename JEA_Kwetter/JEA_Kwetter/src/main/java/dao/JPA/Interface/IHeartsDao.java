@@ -5,12 +5,13 @@ import domain.Heart;
 import domain.Message;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface IHeartsDao extends IGenericDao<Heart> {
 
-    ArrayList<Heart> getAllHeartsOfMessage(Message message);
+    List<Heart> getAllHeartsOfMessage(Long id);
 
-    ArrayList<Account> getAllHeartedAccountsOfMessage(Message message);
+    List<Heart> getAllHeartedAccountsOfMessage(Long id);
 
 
 }

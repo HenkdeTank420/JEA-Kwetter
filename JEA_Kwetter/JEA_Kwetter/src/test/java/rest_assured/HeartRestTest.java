@@ -8,11 +8,11 @@ public class HeartRestTest extends BaseRestTest {
 
     @Test
     public void getAllHeartsOfMessage() {
-        given().when().get("/api/heart/Violet").then().statusCode(200);
+        given().when().get("/api/heart/1").then().statusCode(200);
     }
 
     @Test
     public void getAllAccountThatGaveHeartOfMessage() {
-        given().when().get("/api/heart/Violet/account").then().statusCode(200);
+        given().when().get("/api/heart/account/1").then().statusCode(200);
     }
 }
