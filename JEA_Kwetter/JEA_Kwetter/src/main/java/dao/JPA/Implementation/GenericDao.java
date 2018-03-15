@@ -39,9 +39,4 @@ public class GenericDao<T> implements IGenericDao<T> {
         return em.find(type, object);
     }
 
-    @Override
-    public ArrayList<T> getAllObjects() {
-        Query query = em.createQuery("SELECT a FROM Account a");
-        return new ArrayList<>(query.getResultList());
-    }
 }

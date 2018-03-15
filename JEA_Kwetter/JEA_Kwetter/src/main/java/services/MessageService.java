@@ -2,7 +2,10 @@ package services;
 
 import dao.JPA.Interface.IMessageDao;
 import dao.JPA.Interface.JPAKwetter;
+import domain.Account;
+import domain.Heart;
 import domain.Message;
+import domain.Trend;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -37,4 +40,10 @@ public class MessageService {
     public List<Message> findMessagesOfAccount(String userName){return this.messageDao.findMessagesOfAccount(userName);}
 
     public List<Message> findMessgesWithWordInText(String word){return this.messageDao.findMessagesWithWordInText(word);}
+
+    public Message addTrend(Message message, Trend trend){return this.messageDao.addTrend(message, trend);}
+
+    public Message addAccount(Message message, Account account) {return this.messageDao.addAccount(message, account);}
+
+    public Message addHeart(Message message, Heart heart) {return this.messageDao.addHeart(message, heart);}
 }

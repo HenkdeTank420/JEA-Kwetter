@@ -11,4 +11,6 @@ public interface IRoleDao extends IGenericDao<Role> {
     List<Role> getAccountsWithRole(String RoleName);
 
     void addAccountToRole(Account account, Role role);
+
+    ArrayList<Role> getAllObjects();
 }

@@ -9,7 +9,7 @@ import static org.hamcrest.core.StringContains.containsString;
 public class AccountRestTest extends BaseRestTest {
 
     @Test
-    public void basicPingTest() {
+    public void getAllAccounts() {
         given().when().get("/api/account").then().statusCode(200);
     }
 

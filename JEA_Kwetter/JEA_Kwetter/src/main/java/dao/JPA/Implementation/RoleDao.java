@@ -6,6 +6,7 @@ import domain.Account;
 import domain.Role;
 
 import javax.ejb.Stateless;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,5 +27,10 @@ public class RoleDao extends GenericDao<Role> implements IRoleDao {
         accounts.add(account);
         role.setAccountsWithThisRole(accounts);
         em.persist(role);
+    }
+
+    public ArrayList<Role> getAllObjects() {
+        Query query = em.createQuery("SELECT a FROM Role a");
+        return new ArrayList<>(query.getResultList());
     }
 }

@@ -2,10 +2,13 @@ package dao.JPA.Implementation;
 
 import dao.JPA.Interface.ITrendDao;
 import dao.JPA.Interface.JPAKwetter;
+import domain.Account;
 import domain.Trend;
 
 import javax.ejb.Stateless;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -18,4 +21,10 @@ public class TrendDao extends GenericDao<Trend> implements ITrendDao {
         List<Trend> result = query.getResultList();
         return result.get(0);
     }
+
+    public ArrayList<Trend> getAllObjects() {
+        Query query = em.createQuery("SELECT a FROM Trend a");
+        return new ArrayList<>(query.getResultList());
+    }
+
 }

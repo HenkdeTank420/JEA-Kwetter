@@ -4,12 +4,15 @@ import javax.enterprise.context.Dependent;
 import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Named
 @NamedQueries({
-        @NamedQuery(name = "account.findByname", query = "SELECT a FROM Account a WHERE a.Username = :name")})
+        @NamedQuery(name = "account.findByname", query = "SELECT a FROM Account a WHERE a.Username = :name"),
+        @NamedQuery(name = "account.findFollowers", query = "SELECT a.Followers FROM Account a WHERE a.Username = :name"),
+        @NamedQuery(name = "account.findFollowees", query = "SELECT a.Followees FROM Account a WHERE a.Username = :name")})
 public class Account implements Serializable{
 
     @Id
@@ -19,10 +22,10 @@ public class Account implements Serializable{
     @Column(unique = true)
     private String Username;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "accounts")
     private List<Account> Followers;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "accounts")
     private List<Account> Followees;
 
     private String Web;
@@ -109,5 +112,16 @@ public class Account implements Serializable{
 
     public void setMessages(Message messages) {
         this.messages = messages;
+    }
+
+    @ManyToMany
+    private Collection<Account> accounts;
+
+    public Collection<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(Collection<Account> accounts) {
+        this.accounts = accounts;
     }
 }

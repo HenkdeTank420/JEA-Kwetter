@@ -5,6 +5,7 @@ import dao.JPA.Interface.JPAKwetter;
 import domain.Account;
 
 import javax.ejb.Stateless;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +14,18 @@ import java.util.List;
 @JPAKwetter
 public class AccountDao extends GenericDao<Account> implements IAccountDao{
 
-    public ArrayList<Account> getAllFollowersOfAccount(String userName) {
-        return null;
+    public List<Account> getAllFollowersOfAccount(String userName) {
+        TypedQuery<Account> query = em.createNamedQuery("account.findFollowers", Account.class);
+        query.setParameter("name", userName);
+        List<Account> result = query.getResultList();
+        return result;
     }
 
-    public ArrayList<Account> getAllFolloweesOfAccount(String userName) {
-        return null;
+    public List<Account> getAllFolloweesOfAccount(String userName) {
+        TypedQuery<Account> query = em.createNamedQuery("account.findFollowees", Account.class);
+        query.setParameter("name", userName);
+        List<Account> result = query.getResultList();
+        return result;
     }
 
     @Override
@@ -30,10 +37,25 @@ public class AccountDao extends GenericDao<Account> implements IAccountDao{
     }
 
     @Override
-    public Account addFollower(Account user, Account follower) { return null; }
+    public Account addFollower(Account user, Account follower) {
+        ArrayList<Account> followers = new ArrayList<>();
+        followers.add(follower);
+        user.setFollowers(followers);
+        em.persist(user);
+        return user;
+    }
 
     @Override
     public Account addFollowee(Account user, Account followee) {
-        return null;
+        ArrayList<Account> followees = new ArrayList<>();
+        followees.add(followee);
+        user.setFollowees(followees);
+        em.persist(user);
+        return user;
+    }
+
+    public ArrayList<Account> getAllObjects() {
+        Query query = em.createQuery("SELECT a FROM Account a");
+        return new ArrayList<>(query.getResultList());
     }
 }

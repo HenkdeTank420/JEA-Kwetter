@@ -1,6 +1,6 @@
 package dao.JPA.Interface;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface IGenericDao<T> {
 
@@ -11,6 +11,4 @@ public interface IGenericDao<T> {
     T findById(Long id);
 
     T findObject(T object);
-
-    ArrayList<T> getAllObjects();
 }

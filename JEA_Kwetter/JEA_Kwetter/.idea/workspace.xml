@@ -7,47 +7,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="132aa3b3-da88-40a6-a68d-907628bdaabf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/TrendEndpoint.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/RoleService.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Coll/MessageDaoColl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/Coll/MessageDaoColl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/HeartDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/HeartDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/AccountDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/AccountDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/TrendDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/TrendDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IHeartsDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IHeartsDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IAccountDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IAccountDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IGenericDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IGenericDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IMessageDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IMessageDao.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/ITrendDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/ITrendDao.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Account.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Account.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Heart.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Heart.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Message.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Message.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Role.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Role.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Trend.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Trend.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_assured/HeartRestTest.java" afterPath="$PROJECT_DIR$/src/test/java/rest_assured/HeartRestTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_assured/TrendRestTest.java" afterPath="$PROJECT_DIR$/src/test/java/rest_assured/TrendRestTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/services/MessageService.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_assured/AccountRestTest.java" afterPath="$PROJECT_DIR$/src/test/java/rest_assured/AccountRestTest.java" />
       <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter.war" afterPath="$PROJECT_DIR$/target/JEA_Kwetter.war" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/Coll/MessageDaoColl.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/Coll/MessageDaoColl.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/HeartDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/HeartDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/AccountDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/AccountDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/GenericDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/GenericDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/MessageDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/MessageDao.class" />
       <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/RoleDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/RoleDao.class" />
       <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/TrendDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/TrendDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IHeartsDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IHeartsDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IAccountDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IAccountDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IGenericDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IGenericDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IMessageDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IMessageDao.class" />
       <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IRoleDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IRoleDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/ITrendDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/ITrendDao.class" />
       <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Account.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Account.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Heart.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Heart.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Message.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Message.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Role.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Role.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Trend.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Trend.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/AccountService.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/AccountService.class" />
+      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/MessageService.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/MessageService.class" />
       <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/StartUp.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/StartUp.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/Coll/MessageDaoColl.class" afterPath="$PROJECT_DIR$/target/classes/dao/Coll/MessageDaoColl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/HeartDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/HeartDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/AccountDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/AccountDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/GenericDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/GenericDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/MessageDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/MessageDao.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/RoleDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/RoleDao.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/TrendDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/TrendDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IHeartsDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IHeartsDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IAccountDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IAccountDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IGenericDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IGenericDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IMessageDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IMessageDao.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IRoleDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IRoleDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/ITrendDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/ITrendDao.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/domain/Account.class" afterPath="$PROJECT_DIR$/target/classes/domain/Account.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Heart.class" afterPath="$PROJECT_DIR$/target/classes/domain/Heart.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Message.class" afterPath="$PROJECT_DIR$/target/classes/domain/Message.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Role.class" afterPath="$PROJECT_DIR$/target/classes/domain/Role.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Trend.class" afterPath="$PROJECT_DIR$/target/classes/domain/Trend.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_assured/MessageRestTest.class" afterPath="$PROJECT_DIR$/target/test-classes/rest_assured/MessageRestTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/MessageService.class" afterPath="$PROJECT_DIR$/target/classes/services/MessageService.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_assured/AccountRestTest.class" afterPath="$PROJECT_DIR$/target/test-classes/rest_assured/AccountRestTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,51 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AccountListEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/AccountListEndpoint.java">
+      <file leaf-file-name="MessageDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="36" column="5" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartUp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/StartUp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeartEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/HeartEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-21">
-              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrendDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/TrendDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrendEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/TrendEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
-              <caret line="25" column="89" lean-forward="false" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
+            <state relative-caret-position="314">
+              <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,41 +86,103 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Message.java">
+      <file leaf-file-name="IMessageDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IMessageDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="284">
+              <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java">
+      <file leaf-file-name="IRoleDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding />
+              <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="34" column="87" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Trend.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Trend.java">
+      <file leaf-file-name="ITrendDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/ITrendDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/AccountService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HeartService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/HeartService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-73">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/RoleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrendService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/TrendService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartUp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/StartUp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -187,9 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/Coll/TestAccountDaoColl.java" />
-        <option value="$PROJECT_DIR$/src/test/test/java/Coll/TestAccountDaoColl.java" />
-        <option value="$PROJECT_DIR$/src/test/test/java/Coll/TestTrendDaoColl.java" />
         <option value="$PROJECT_DIR$/src/test/test/java/TestUserDaoColl.java" />
         <option value="$PROJECT_DIR$/src/test/test/java/TestAccountDaoColl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistence.xml" />
@@ -202,42 +224,45 @@
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/JAXRSConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/ApplicationConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/PingResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IAccountDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/AccountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Account.java" />
         <option value="$PROJECT_DIR$/sonar-project.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/TestAccountDaoColl.java" />
         <option value="$PROJECT_DIR$/src/test/java/rest_assured/BaseRestTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/rest_assured/RoleRestTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/rest_assured/AccountRestTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/AccountListEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/AccountDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IMessageDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java" />
         <option value="$PROJECT_DIR$/src/test/java/rest_assured/MessageRestTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/RoleEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/RoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/Coll/MessageDaoColl.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Heart.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/HeartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/HeartDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IHeartsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/HeartEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/TrendService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/TrendDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Trend.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/TrendEndpoint.java" />
         <option value="$PROJECT_DIR$/src/test/java/rest_assured/TrendRestTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/StartUp.java" />
         <option value="$PROJECT_DIR$/src/test/java/rest_assured/HeartRestTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IHeartsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Message.java" />
+        <option value="$PROJECT_DIR$/src/test/java/rest_assured/AccountRestTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/AccountDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IAccountDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IGenericDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/TrendDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IMessageDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/ITrendDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/RoleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/StartUp.java" />
       </list>
     </option>
   </component>
@@ -830,29 +855,11 @@
       <workItem from="1520941191691" duration="4063000" />
       <workItem from="1520957505291" duration="478000" />
       <workItem from="1521024245654" duration="9000" />
-      <workItem from="1521128489155" duration="12181000" />
+      <workItem from="1521128489155" duration="15161000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 17h 40m 02s.xml">
-      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 17h 51m 37s.xml">
-      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 17h 52m 41s.xml">
-      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 17h 57m 03s.xml">
-      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 18h 23m 04s.xml">
-      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 18h 25m 11s.xml">
-      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 19h 56m 19s.xml">
       <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
     </history-entry>
@@ -865,9 +872,27 @@
     <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 20h 37m 50s.xml">
       <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 20h 51m 16s.xml">
+      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 20h 59m 39s.xml">
+      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 21h 13m 12s.xml">
+      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 21h 21m 14s.xml">
+      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 21h 23m 18s.xml">
+      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="rest_assured_in_basic-jee - 2018.03.15 at 21h 29m 00s.xml">
+      <configuration name="rest_assured in basic-jee" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72495000" />
+    <option name="totallyTimeSpent" value="75475000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,7 +905,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -902,7 +926,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.49570355" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44746163" sideWeight="0.67400646" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44746163" sideWeight="0.67400646" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.49570355" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -932,18 +956,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/JPAKwetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Index.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/endpoint/AccountListEndpoint.java" />
     <entry file="file://$PROJECT_DIR$/basic-jee.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -978,14 +990,6 @@
             <element signature="e#151#152#0" expanded="false" />
             <element signature="e#192#193#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IAccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,60 +1091,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="45" column="82" lean-forward="false" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/AccountRestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#303#304#0" expanded="false" />
-            <element signature="e#376#377#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IMessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="60" />
-          <folding>
-            <element signature="e#750#759#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1161,52 +1117,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/MessageRestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/RoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IHeartsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/RoleEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="36" column="5" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/HeartDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1232,47 +1146,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/HeartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/AccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Trend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/TrendService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="25" column="85" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1289,77 +1167,250 @@
         <state relative-caret-position="11">
           <caret line="25" column="89" lean-forward="false" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/StartUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/TrendRestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/HeartRestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/HeartEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
+        <state relative-caret-position="-84">
           <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/TrendDao.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/TrendRestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="146">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#308#309#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/MessageRestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#370#371#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/HeartRestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#270#271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IHeartsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="e#2669#2670#0" expanded="false" />
+            <element signature="e#2700#2701#0" expanded="false" />
+            <element signature="e#2761#2762#0" expanded="false" />
+            <element signature="e#2801#2802#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="168">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rest_assured/AccountRestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#377#378#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IGenericDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/HeartDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/TrendDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="25" column="58" lean-forward="false" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="32" column="57" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IMessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Interface/ITrendDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/HeartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="34" column="87" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="87" />
+        <state relative-caret-position="262">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/TrendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/StartUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
           <folding />
         </state>
       </provider>
