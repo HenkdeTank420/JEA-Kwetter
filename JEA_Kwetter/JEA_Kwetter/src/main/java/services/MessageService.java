@@ -7,6 +7,7 @@ import domain.Message;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.ArrayList;
+import java.util.List;
 
 @Stateless
 public class MessageService {
@@ -33,7 +34,7 @@ public class MessageService {
 
     public ArrayList<Message> getAllMessages(){return this.messageDao.getAllObjects();}
 
-    public Message findMessagesOfAccount(String userName){return this.messageDao.findMessagesOfAccount(userName);}
+    public List<Message> findMessagesOfAccount(String userName){return this.messageDao.findMessagesOfAccount(userName);}
 
-    public Message findMessgesWithWordInText(String word){return this.messageDao.findMessagesWithWordInText(word);}
+    public List<Message> findMessgesWithWordInText(String word){return this.messageDao.findMessagesWithWordInText(word);}
 }

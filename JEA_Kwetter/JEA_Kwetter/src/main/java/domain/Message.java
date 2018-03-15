@@ -5,6 +5,9 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "message.findMessageByName", query = "SELECT m FROM Message m WHERE m.Owner = :name"),
+        @NamedQuery(name = "message.findMessageByWord", query = "SELECT m FROM Message m WHERE m.Text = :word")})
 public class Message implements Serializable {
 
     @Id

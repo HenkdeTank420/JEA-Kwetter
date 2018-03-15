@@ -1,5 +1,3 @@
-package test.java;
-
 import dao.Coll.AccountDaoColl;
 import domain.Account;
 import org.junit.Before;

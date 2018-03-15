@@ -30,9 +30,7 @@ public class AccountDao extends GenericDao<Account> implements IAccountDao{
     }
 
     @Override
-    public Account addFollower(Account user, Account follower) {
-        return null;
-    }
+    public Account addFollower(Account user, Account follower) { return null; }
 
     @Override
     public Account addFollowee(Account user, Account followee) {

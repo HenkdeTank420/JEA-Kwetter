@@ -2,9 +2,11 @@ package dao.JPA.Interface;
 
 import domain.Message;
 
+import java.util.List;
+
 public interface IMessageDao extends IGenericDao<Message> {
 
-    Message findMessagesOfAccount(String userName);
+    List<Message> findMessagesOfAccount(String userName);
 
-    Message findMessagesWithWordInText(String word);
+    List<Message> findMessagesWithWordInText(String word);
 }

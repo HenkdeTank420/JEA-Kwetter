@@ -1,5 +1,3 @@
-package test.java;
-
 import dao.Coll.UserDaoColl;
 import domain.User;
 import org.junit.BeforeClass;

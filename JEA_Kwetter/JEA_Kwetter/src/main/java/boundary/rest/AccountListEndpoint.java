@@ -31,9 +31,25 @@ public class AccountListEndpoint extends Application{
     @GET
     @Path("{name}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Account getStudent(@PathParam("name") String name) {
+    public Account getAccount(@PathParam("name") String name) {
         Account account = accountService.findByName(name);
         return account;
+    }
+
+    @GET
+    @Path("followers/{name}")
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response getFollowersOfAccount(@PathParam("name") String name) {
+        GenericEntity entity = new GenericEntity<List<Account>>(accountService.getAllFollowers(name)){};
+        return Response.ok(entity).build();
+    }
+
+    @GET
+    @Path("followees{name}")
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response getFolloweesOfAccount(@PathParam("name") String name) {
+        GenericEntity entity = new GenericEntity<List<Account>>(accountService.getAllFollowees(name)){};
+        return Response.ok(entity).build();
     }
 
 }
