@@ -1,5 +1,7 @@
 package domain;
 
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -15,7 +17,7 @@ public class Role implements Serializable {
 
     private String Name;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Account> AccountsWithThisRole;
 
     public Role(){
@@ -25,6 +27,14 @@ public class Role implements Serializable {
     public Role(String name, List<Account> accountsWithThisRole){
         this.Name = name;
         this.AccountsWithThisRole = accountsWithThisRole;
+    }
+
+    public JsonObject convertToJson(){
+        return Json.createObjectBuilder()
+                .add("id", this.Id)
+                .add("name", this.Name)
+                .add("accountswiththisrole", this.AccountsWithThisRole.size())
+                .build();
     }
 
     public long getId() {

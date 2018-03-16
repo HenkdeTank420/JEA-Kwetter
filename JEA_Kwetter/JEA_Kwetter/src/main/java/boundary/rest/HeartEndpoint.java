@@ -12,6 +12,7 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("heart")
@@ -24,15 +25,15 @@ public class HeartEndpoint extends Application {
     @Path("{id}")
     @Produces({MediaType.APPLICATION_JSON})
     public Response getHeartsOfMessage(@PathParam("id") Long id) {
-        GenericEntity entity = new GenericEntity<List<Heart>>(heartService.getAllHeartsOfMessage(id)){};
-        return Response.ok(entity).build();
+        List<Heart> hearts = new ArrayList<Heart>(heartService.getAllHeartsOfMessage(id)){};
+        return Response.ok(heartService.convertAllToJson(hearts)).build();
     }
 
     @GET
     @Path("account/{id}")
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAccountsThatGaveHeartsOfMessage(@PathParam("id") Long id) {
-        GenericEntity entity = new GenericEntity<List<Heart>>(heartService.getAllHeartedAccountsOfMessage(id)){};
-        return Response.ok(entity).build();
+        List<Heart> hearts = new ArrayList<Heart>(heartService.getAllHeartedAccountsOfMessage(id)){};
+        return Response.ok(heartService.convertAllToJson(hearts)).build();
     }
 }

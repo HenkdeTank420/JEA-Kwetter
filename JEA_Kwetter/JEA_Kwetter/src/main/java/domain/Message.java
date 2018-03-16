@@ -1,5 +1,7 @@
 package domain;
 
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -14,18 +16,18 @@ public class Message implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Account Owner;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Account> Mentions;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Trend> Trends;
 
     private String Text;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Heart> Hearts;
 
     public Message(){
@@ -38,6 +40,17 @@ public class Message implements Serializable {
         this.Trends = trends;
         this.Text = text;
         this.Hearts = hearts;
+    }
+
+    public JsonObject convertToJson(){
+        return Json.createObjectBuilder()
+                .add("id", this.Id)
+                .add("owner", this.Owner.getUsername())
+                .add("mentions", this.Mentions.size())
+                .add("trend", this.Trends.size())
+                .add("text", this.Text)
+                .add("hearts", this.Hearts.size())
+                .build();
     }
 
     public Long getId() {

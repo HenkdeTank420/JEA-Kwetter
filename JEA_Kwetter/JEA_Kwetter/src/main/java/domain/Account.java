@@ -2,6 +2,8 @@ package domain;
 
 import javax.enterprise.context.Dependent;
 import javax.inject.Named;
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
@@ -22,10 +24,10 @@ public class Account implements Serializable{
     @Column(unique = true)
     private String Username;
 
-    @ManyToMany(mappedBy = "accounts")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "accounts")
     private List<Account> Followers;
 
-    @ManyToMany(mappedBy = "accounts")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "accounts")
     private List<Account> Followees;
 
     private String Web;
@@ -45,6 +47,18 @@ public class Account implements Serializable{
         this.Web = web;
         this.Location = location;
         this.Bio = bio;
+    }
+
+    public JsonObject convertToJson(){
+        return Json.createObjectBuilder()
+                .add("id", this.Id)
+                .add("username", this.Username)
+                .add("followers", this.Followers.size())
+                .add("followees", this.Followees.size())
+                .add("web", this.Web)
+                .add("location", this.Location)
+                .add("bio", this.Bio)
+                .build();
     }
 
     public Long getId() {

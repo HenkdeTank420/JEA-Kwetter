@@ -13,6 +13,7 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("message")
@@ -24,24 +25,23 @@ public class MessageEndpoint extends Application {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAll() {
-        GenericEntity entity = new GenericEntity<List<Message>>(messageService.getAllMessages()) {
-        };
-        return Response.ok(entity).build();
+        List<Message> messages = new ArrayList<Message>(messageService.getAllMessages()) {};
+        return Response.ok(messageService.convertAllToJson(messages)).build();
     }
 
     @GET
     @Path("{name}")
     @Produces({MediaType.APPLICATION_JSON})
     public Response getMessageOfAccount(@PathParam("name") String name) {
-        GenericEntity entity = new GenericEntity<List<Message>>(messageService.findMessagesOfAccount(name)){};
-        return Response.ok(entity).build();
+        List<Message> messages = new ArrayList<Message>(messageService.findMessagesOfAccount(name)){};
+        return Response.ok(messageService.convertAllToJson(messages)).build();
     }
 
     @GET
     @Path("search/{word}")
     @Produces({MediaType.APPLICATION_JSON})
     public Response getMessageWithWord(@PathParam("word") String word) {
-        GenericEntity entity = new GenericEntity<List<Message>>(messageService.findMessgesWithWordInText(word)){};
-        return Response.ok(entity).build();
+        List<Message> messages = new ArrayList<Message>(messageService.findMessgesWithWordInText(word)){};
+        return Response.ok(messageService.convertAllToJson(messages)).build();
     }
 }

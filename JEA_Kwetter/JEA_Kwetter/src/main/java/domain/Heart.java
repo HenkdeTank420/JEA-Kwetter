@@ -1,5 +1,7 @@
 package domain;
 
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,10 +16,10 @@ public class Heart implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Account Liker;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Message Liked;
 
     public Heart(){
@@ -27,6 +29,14 @@ public class Heart implements Serializable{
     public Heart(Account liker, Message liked){
         this.Liker = liker;
         this.Liked = liked;
+    }
+
+    public JsonObject convertToJson(){
+        return Json.createObjectBuilder()
+                .add("id", this.Id)
+                .add("liker", this.Liker.getUsername())
+                .add("liked", this.Liked.getId())
+                .build();
     }
 
     public Long getId() {

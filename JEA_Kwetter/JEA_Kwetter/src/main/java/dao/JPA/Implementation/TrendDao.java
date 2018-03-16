@@ -2,7 +2,6 @@ package dao.JPA.Implementation;
 
 import dao.JPA.Interface.ITrendDao;
 import dao.JPA.Interface.JPAKwetter;
-import domain.Account;
 import domain.Trend;
 
 import javax.ejb.Stateless;

@@ -12,6 +12,7 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("account")
@@ -23,17 +24,17 @@ public class AccountListEndpoint extends Application{
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAll() {
-        GenericEntity entity = new GenericEntity<List<Account>>(accountService.getAllAccounts()) {
+        List<Account> accounts = new ArrayList<Account>(accountService.getAllAccounts()) {
         };
-        return Response.ok(entity).build();
+        return Response.ok(accountService.convertAllToJson(accounts)).build();
     }
 
     @GET
     @Path("{name}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Account getAccount(@PathParam("name") String name) {
+    public Response getAccount(@PathParam("name") String name) {
         Account account = accountService.findByName(name);
-        return account;
+        return Response.ok(account.convertToJson()).build();
     }
 
     @GET

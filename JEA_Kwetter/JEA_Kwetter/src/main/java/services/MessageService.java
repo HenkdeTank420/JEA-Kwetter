@@ -1,5 +1,6 @@
 package services;
 
+import dao.JPA.Implementation.MessageDao;
 import dao.JPA.Interface.IMessageDao;
 import dao.JPA.Interface.JPAKwetter;
 import domain.Account;
@@ -9,6 +10,7 @@ import domain.Trend;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.json.JsonObject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +23,10 @@ public class MessageService {
 
     public MessageService(){
 
+    }
+
+    public MessageService(IMessageDao messageDao){
+        this.messageDao = messageDao;
     }
 
     public Message create(Message message){return this.messageDao.add(message);}
@@ -46,4 +52,12 @@ public class MessageService {
     public Message addAccount(Message message, Account account) {return this.messageDao.addAccount(message, account);}
 
     public Message addHeart(Message message, Heart heart) {return this.messageDao.addHeart(message, heart);}
+
+    public List<JsonObject> convertAllToJson(List<Message> messages) {
+        List<JsonObject> convertedObjects = new ArrayList<>();
+        for (Message message : messages) {
+            convertedObjects.add(message.convertToJson());
+        }
+        return convertedObjects;
+    }
 }

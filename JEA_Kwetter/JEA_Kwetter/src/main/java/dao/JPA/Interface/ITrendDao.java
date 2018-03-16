@@ -3,6 +3,7 @@ package dao.JPA.Interface;
 import domain.Trend;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ITrendDao extends IGenericDao<Trend> {
 

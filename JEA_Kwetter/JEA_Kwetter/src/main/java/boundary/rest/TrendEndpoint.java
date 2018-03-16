@@ -12,6 +12,7 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("trend")
@@ -23,16 +24,16 @@ public class TrendEndpoint extends Application {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAll() {
-        GenericEntity entity = new GenericEntity<List<Trend>>(trendService.getAllTrends()) {
+        List<Trend> trends = new ArrayList<Trend>(trendService.getAllTrends()) {
         };
-        return Response.ok(entity).build();
+        return Response.ok(trendService.convertAllToJson(trends)).build();
     }
 
     @GET
     @Path("{name}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Trend getAccount(@PathParam("name") String name) {
+    public Response getAccount(@PathParam("name") String name) {
         Trend account = trendService.getTrendByName(name);
-        return account;
+        return Response.ok(account.convertToJson()).build();
     }
 }

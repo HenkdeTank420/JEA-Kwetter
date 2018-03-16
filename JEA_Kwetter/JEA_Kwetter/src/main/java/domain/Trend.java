@@ -1,5 +1,7 @@
 package domain;
 
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -19,6 +21,13 @@ public class Trend implements Serializable {
 
     public Trend(String name){
         this.Name = name;
+    }
+
+    public JsonObject convertToJson(){
+        return Json.createObjectBuilder()
+                .add("id", this.Id)
+                .add("name", this.Name)
+                .build();
     }
 
     public Long getId() {
