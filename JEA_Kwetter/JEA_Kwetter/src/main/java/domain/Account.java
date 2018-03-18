@@ -1,6 +1,5 @@
 package domain;
 
-import javax.enterprise.context.Dependent;
 import javax.inject.Named;
 import javax.json.Json;
 import javax.json.JsonObject;
