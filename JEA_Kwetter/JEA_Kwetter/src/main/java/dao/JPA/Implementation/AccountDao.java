@@ -30,7 +30,7 @@ public class AccountDao extends GenericDao<Account> implements IAccountDao{
 
     @Override
     public Account findByName(String name){
-        TypedQuery<Account> query = em.createNamedQuery("account.findByname", Account.class);
+        TypedQuery<Account> query = em.createNamedQuery("account.findByName", Account.class);
         query.setParameter("name", name);
         List<Account> result = query.getResultList();
         return result.get(0);

@@ -1,8 +1,8 @@
 package services;
 
-import dao.JPA.Implementation.AccountDao;
 import dao.JPA.Interface.IAccountDao;
 import domain.Account;
+import domain.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +25,8 @@ public class AccountServiceTest {
     private Account first;
     private Account second;
     private AccountService accountService;
+    private User userOne;
+    private User userTwo;
 
     @Mock
     private IAccountDao accountDao;
@@ -33,8 +35,12 @@ public class AccountServiceTest {
     public void setUp(){
         MockitoAnnotations.initMocks(this);
         accountService = new AccountService(accountDao);
-        //first = new Account("first", "web", "location", "bio");
-        //second = new Account("second", "web", "location", "bio");
+
+        userOne = new User("Violet", "password", "violet@email.com");
+        userTwo = new User("Thomas", "password", "thomas@email.com");
+
+        first = new Account(userOne, "web", "location", "bio");
+        second = new Account(userTwo, "web", "location", "bio");
     }
 
     @Test
@@ -45,9 +51,9 @@ public class AccountServiceTest {
 
     @Test
     public void findAccount_AccountUserName_AccountFound(){
-        //when(accountService.findByName("first")).thenReturn(first);
-        //Account accountFound = accountService.findByName("first");
-        //assertThat(accountFound, is(first));
+        when(accountService.findByName("Violet")).thenReturn(first);
+        Account accountFound = accountService.findByName("Violet");
+        assertThat(accountFound, is(first));
     }
 
     @Test
