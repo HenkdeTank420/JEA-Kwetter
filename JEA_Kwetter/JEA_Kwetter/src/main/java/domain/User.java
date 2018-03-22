@@ -7,6 +7,8 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "account.findByname", query = "SELECT u FROM User u WHERE u.Username = :name")})
 public class User implements Serializable{
 
     @Id
@@ -19,16 +21,16 @@ public class User implements Serializable{
     @Size(min = 6, max = 30)
     private String Password;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Account account;
+    private String email;
 
     public User(){
 
     }
 
-    public User(String username, String password){
+    public User(String username, String password, String email){
         this.Username = username;
         this.Password = password;
+        this.email = email;
     }
 
     public JsonObject convertToJson(){
@@ -36,6 +38,7 @@ public class User implements Serializable{
                 .add("id", this.Id)
                 .add("name", this.Username)
                 .add("password", this.Password)
+                .add("email", this.email)
                 .build();
     }
 
@@ -63,11 +66,11 @@ public class User implements Serializable{
         Password = password;
     }
 
-    public Account getAccount() {
-        return account;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

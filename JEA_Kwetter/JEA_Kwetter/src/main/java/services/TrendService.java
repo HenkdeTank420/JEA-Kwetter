@@ -1,6 +1,5 @@
 package services;
 
-import dao.JPA.Implementation.TrendDao;
 import dao.JPA.Interface.ITrendDao;
 import dao.JPA.Interface.JPAKwetter;
 import domain.Trend;
@@ -31,6 +30,8 @@ public class TrendService {
     public ArrayList<Trend> getAllTrends(){return this.trendDao.getAllObjects();}
 
     public Trend getTrendByName(String trend){return this.trendDao.findByName(trend);}
+
+    public List<Trend> getAllMessagesOfTrend(String trend){ return this.trendDao.getAllMessagesOfTrend(trend);}
 
     public List<JsonObject> convertAllToJson(List<Trend> trends) {
         List<JsonObject> convertedObjects = new ArrayList<>();

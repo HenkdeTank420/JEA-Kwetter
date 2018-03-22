@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "message.findMessageByName", query = "SELECT m FROM Message m WHERE m.Owner.Username = :name"),
+        @NamedQuery(name = "message.findMessageByName", query = "SELECT m FROM Message m WHERE m.Owner.user.Username = :name"),
         @NamedQuery(name = "message.findMessageByWord", query = "SELECT m FROM Message m WHERE m.Text = :word")})
 public class Message implements Serializable {
 
@@ -22,7 +22,7 @@ public class Message implements Serializable {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Account> Mentions;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "message")
     private List<Trend> Trends;
 
     private String Text;
@@ -34,18 +34,15 @@ public class Message implements Serializable {
 
     }
 
-    public Message(Account owner, List<Account> mentions, List<Trend> trends, String text, List<Heart> hearts){
+    public Message(Account owner, String text){
         this.Owner = owner;
-        this.Mentions = mentions;
-        this.Trends = trends;
         this.Text = text;
-        this.Hearts = hearts;
     }
 
     public JsonObject convertToJson(){
         return Json.createObjectBuilder()
                 .add("id", this.Id)
-                .add("owner", this.Owner.getUsername())
+                .add("owner", this.Owner.getUser().getUsername())
                 .add("mentions", this.Mentions.size())
                 .add("trend", this.Trends.size())
                 .add("text", this.Text)

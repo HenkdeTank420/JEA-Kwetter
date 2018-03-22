@@ -1,6 +1,5 @@
 package services;
 
-import dao.JPA.Implementation.RoleDao;
 import dao.JPA.Interface.IRoleDao;
 import dao.JPA.Interface.JPAKwetter;
 import domain.Account;
@@ -17,14 +16,11 @@ public class RoleService {
     @JPAKwetter
     private IRoleDao roleDao;
 
-    public RoleService(){
-
-    }
+    public RoleService(){    }
 
     public RoleService(IRoleDao roleDao){
         this.roleDao = roleDao;
     }
-
 
     public Role create(Role role){ return this.roleDao.add(role); }
 

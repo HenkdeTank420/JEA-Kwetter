@@ -10,4 +10,6 @@ public interface ITrendDao extends IGenericDao<Trend> {
     Trend findByName(String trendName);
 
     ArrayList<Trend> getAllObjects();
+
+    List<Trend> getAllMessagesOfTrend(String trendName);
 }

@@ -33,7 +33,7 @@ public class AccountDaoColl {
 
     public Account findAccountByName(String userName){
         for(Account account : accounts){
-            if(account.getUsername().contentEquals(userName)){
+            if(account.getUser().getUsername().contentEquals(userName)){
                 return account;
             }
         }
@@ -42,7 +42,7 @@ public class AccountDaoColl {
 
     public List<Account> getAllFollowersOfAccount(String userName){
         for(Account account : accounts){
-            if(account.getUsername().contentEquals(userName)){
+            if(account.getUser().getUsername().contentEquals(userName)){
                 return account.getFollowers();
             }
         }
@@ -51,7 +51,7 @@ public class AccountDaoColl {
 
     public List<Account> getAllFolloweesOfAccount(String userName){
         for(Account account : accounts){
-            if(account.getUsername().contentEquals(userName)){
+            if(account.getUser().getUsername().contentEquals(userName)){
                 return account.getFollowees();
             }
         }

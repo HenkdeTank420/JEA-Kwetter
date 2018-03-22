@@ -34,9 +34,9 @@ public class HeartServiceTest {
     public void setUp(){
         MockitoAnnotations.initMocks(this);
         heartService = new HeartService(heartsDao);
-        account = new Account("first", null, null, "web", "location", "bio");
-        owner = new Account("second", null, null, "web", "location", "bio");
-        message = new Message(owner, null, null, "text", null);
+        //account = new Account("first", null, null, "web", "location", "bio");
+        //owner = new Account("second", null, null, "web", "location", "bio");
+        message = new Message(owner, "text");
         heart = new Heart(account, message);
     }
 

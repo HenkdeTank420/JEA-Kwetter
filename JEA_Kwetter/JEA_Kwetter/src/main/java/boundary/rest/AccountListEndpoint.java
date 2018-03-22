@@ -33,8 +33,9 @@ public class AccountListEndpoint extends Application{
     @Path("{name}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response getAccount(@PathParam("name") String name) {
-        Account account = accountService.findByName(name);
-        return Response.ok(account.convertToJson()).build();
+        //Account account = accountService.findByName(name);
+        //return Response.ok(account.convertToJson()).build();
+        return null;
     }
 
     @GET

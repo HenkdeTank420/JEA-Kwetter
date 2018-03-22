@@ -26,4 +26,11 @@ public class TrendDao extends GenericDao<Trend> implements ITrendDao {
         return new ArrayList<>(query.getResultList());
     }
 
+    public List<Trend> getAllMessagesOfTrend(String trendName){
+        TypedQuery<Trend> query = em.createNamedQuery("trend.findMessagesOfTrend", Trend.class);
+        query.setParameter("trendName", trendName);
+        List<Trend> result = query.getResultList();
+        return result;
+    }
+
 }

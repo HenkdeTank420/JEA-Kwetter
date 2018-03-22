@@ -24,9 +24,8 @@ public class Role implements Serializable {
 
     }
 
-    public Role(String name, List<Account> accountsWithThisRole){
+    public Role(String name){
         this.Name = name;
-        this.AccountsWithThisRole = accountsWithThisRole;
     }
 
     public JsonObject convertToJson(){

@@ -34,7 +34,7 @@ public class Heart implements Serializable{
     public JsonObject convertToJson(){
         return Json.createObjectBuilder()
                 .add("id", this.Id)
-                .add("liker", this.Liker.getUsername())
+                .add("liker", this.Liker.getUser().getUsername())
                 .add("liked", this.Liked.getId())
                 .build();
     }

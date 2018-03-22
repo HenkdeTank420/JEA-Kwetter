@@ -1,11 +1,8 @@
 package services;
 
-import dao.JPA.Implementation.HeartDao;
 import dao.JPA.Interface.IHeartsDao;
 import dao.JPA.Interface.JPAKwetter;
-import domain.Account;
 import domain.Heart;
-import domain.Message;
 
 import javax.inject.Inject;
 import javax.json.JsonObject;

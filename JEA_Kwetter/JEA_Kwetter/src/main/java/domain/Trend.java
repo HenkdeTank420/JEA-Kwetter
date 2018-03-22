@@ -7,7 +7,8 @@ import java.io.Serializable;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "trend.findByname", query = "SELECT t FROM Trend t WHERE t.Name = :trendName")})
+        @NamedQuery(name = "trend.findByname", query = "SELECT t FROM Trend t WHERE t.Name = :trendName"),
+        @NamedQuery(name = "trend.findMessagesOfTrend", query = "SELECT t.message FROM Trend t WHERE t.Name = :trendName")})
 public class Trend implements Serializable {
 
     @Id
@@ -16,6 +17,9 @@ public class Trend implements Serializable {
 
     @Column(unique = true)
     private String Name;
+
+    @ManyToOne
+    private Message message;
 
     public Trend(){}
 
@@ -27,6 +31,7 @@ public class Trend implements Serializable {
         return Json.createObjectBuilder()
                 .add("id", this.Id)
                 .add("name", this.Name)
+                .add("message", this.message.getId())
                 .build();
     }
 
@@ -44,5 +49,13 @@ public class Trend implements Serializable {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public Message getMessage() {
+        return message;
+    }
+
+    public void setMessage(Message message) {
+        this.message = message;
     }
 }

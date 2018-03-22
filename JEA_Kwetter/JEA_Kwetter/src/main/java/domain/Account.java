@@ -1,6 +1,5 @@
 package domain;
 
-import javax.inject.Named;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
@@ -9,19 +8,17 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
-@Named
 @NamedQueries({
-        @NamedQuery(name = "account.findByname", query = "SELECT a FROM Account a WHERE a.Username = :name"),
-        @NamedQuery(name = "account.findFollowers", query = "SELECT a.Followers FROM Account a WHERE a.Username = :name"),
-        @NamedQuery(name = "account.findFollowees", query = "SELECT a.Followees FROM Account a WHERE a.Username = :name")})
+        @NamedQuery(name = "account.findFollowers", query = "SELECT a.Followers FROM Account a WHERE a.user.Username = :name"),
+        @NamedQuery(name = "account.findFollowees", query = "SELECT a.Followees FROM Account a WHERE a.user.Username = :name")})
 public class Account implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(unique = true)
-    private String Username;
+    @OneToOne(cascade = CascadeType.ALL)
+    private User user;
 
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "accounts")
     private List<Account> Followers;
@@ -35,14 +32,18 @@ public class Account implements Serializable{
 
     private String Bio;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Message> messages;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Role role;
+
     public Account(){
 
     }
 
-    public Account(String username, List<Account> followers, List<Account> followees, String web, String location, String bio){
-        this.Username = username;
-        this.Followers = followers;
-        this.Followees = followees;
+    public Account(User user, String web, String location, String bio){
+        this.user = user;
         this.Web = web;
         this.Location = location;
         this.Bio = bio;
@@ -51,12 +52,14 @@ public class Account implements Serializable{
     public JsonObject convertToJson(){
         return Json.createObjectBuilder()
                 .add("id", this.Id)
-                .add("username", this.Username)
+                .add("user", this.user.getUsername())
                 .add("followers", this.Followers.size())
                 .add("followees", this.Followees.size())
                 .add("web", this.Web)
                 .add("location", this.Location)
                 .add("bio", this.Bio)
+                .add("messages", this.messages.size())
+                .add("role", this.role.getId())
                 .build();
     }
 
@@ -68,12 +71,12 @@ public class Account implements Serializable{
         Id = id;
     }
 
-    public String getUsername() {
-        return Username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        Username = username;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public List<Account> getFollowers() {
@@ -116,15 +119,20 @@ public class Account implements Serializable{
         Bio = bio;
     }
 
-    @ManyToOne(optional = false)
-    private Message messages;
-
-    public Message getMessages() {
+    public List<Message> getMessages() {
         return messages;
     }
 
-    public void setMessages(Message messages) {
+    public void setMessages(List<Message> messages) {
         this.messages = messages;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @ManyToMany
