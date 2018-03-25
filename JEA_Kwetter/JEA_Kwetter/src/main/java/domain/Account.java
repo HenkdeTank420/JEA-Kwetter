@@ -9,9 +9,9 @@ import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "account.findFollowers", query = "SELECT a.Followers FROM Account a WHERE a.user.Username = :name"),
-        @NamedQuery(name = "account.findFollowees", query = "SELECT a.Followees FROM Account a WHERE a.user.Username = :name"),
-        @NamedQuery(name = "account.findByName", query = "SELECT a FROM Account a WHERE a.user.Username = :name")})
+        @NamedQuery(name = "account.findFollowers", query = "SELECT a.Followers FROM Account a WHERE a.user.Username = :Username"),
+        @NamedQuery(name = "account.findFollowees", query = "SELECT a.Followees FROM Account a WHERE a.user.Username = :Username"),
+        @NamedQuery(name = "account.findByName", query = "SELECT a FROM Account a WHERE a.user.Username = :Username")})
 public class Account implements Serializable{
 
     @Id
@@ -21,10 +21,10 @@ public class Account implements Serializable{
     @OneToOne(cascade = CascadeType.ALL)
     private User user;
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "accounts")
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Account> Followers;
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "accounts")
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Account> Followees;
 
     private String Web;
@@ -136,14 +136,4 @@ public class Account implements Serializable{
         this.role = role;
     }
 
-    @ManyToMany
-    private Collection<Account> accounts;
-
-    public Collection<Account> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(Collection<Account> accounts) {
-        this.accounts = accounts;
-    }
 }

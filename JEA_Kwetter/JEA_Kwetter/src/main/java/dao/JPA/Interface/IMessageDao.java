@@ -20,5 +20,7 @@ public interface IMessageDao extends IGenericDao<Message> {
 
     Message addHeart(Message message, Heart heart);
 
+    Message addMention(Message message, Account mention);
+
     ArrayList<Message> getAllObjects();
 }

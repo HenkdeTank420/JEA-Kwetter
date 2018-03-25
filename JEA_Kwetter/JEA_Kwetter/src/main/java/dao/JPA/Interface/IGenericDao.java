@@ -1,12 +1,13 @@
 package dao.JPA.Interface;
 
-import java.util.List;
 
 public interface IGenericDao<T> {
 
     T add(T object);
 
     void delete(T object);
+
+    void deleteById(Long id);
 
     T findById(Long id);
 

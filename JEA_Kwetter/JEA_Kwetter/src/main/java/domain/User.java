@@ -3,12 +3,19 @@ package domain;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Objects;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "account.findByname", query = "SELECT u FROM User u WHERE u.Username = :name")})
+        @NamedQuery(name = "user.findByName", query = "SELECT u FROM User u WHERE u.Username = :Username"),
+        @NamedQuery(name = "user.findByCredentials", query = "SELECT u FROM User u " +
+                "WHERE u.Username = :username AND u.Password = :password")})
 public class User implements Serializable{
 
     @Id
@@ -21,6 +28,7 @@ public class User implements Serializable{
     @Size(min = 6, max = 30)
     private String Password;
 
+    @Email
     private String email;
 
     public User(){
@@ -28,6 +36,7 @@ public class User implements Serializable{
     }
 
     public User(String username, String password, String email){
+        this();
         this.Username = username;
         this.Password = password;
         this.email = email;
@@ -35,11 +44,9 @@ public class User implements Serializable{
 
     public JsonObject convertToJson(){
         return Json.createObjectBuilder()
-                .add("id", this.Id)
-                .add("name", this.Username)
-                .add("password", this.Password)
-                .add("email", this.email)
-                .build();
+            .add("username", this.getUsername())
+            .add("email", this.getEmail())
+            .build();
     }
 
     public Long getId() {

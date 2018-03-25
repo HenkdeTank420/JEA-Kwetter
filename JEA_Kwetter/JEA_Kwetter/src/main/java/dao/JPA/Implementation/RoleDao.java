@@ -27,6 +27,8 @@ public class RoleDao extends GenericDao<Role> implements IRoleDao {
         accounts.add(account);
         role.setAccountsWithThisRole(accounts);
         em.persist(role);
+        account.setRole(role);
+        em.persist(account);
     }
 
     public ArrayList<Role> getAllObjects() {

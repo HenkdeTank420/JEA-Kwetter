@@ -53,6 +53,8 @@ public class MessageService {
 
     public Message addHeart(Message message, Heart heart) {return this.messageDao.addHeart(message, heart);}
 
+    public Message addMention(Message message, Account mention) {return this.messageDao.addMention(message, mention);}
+
     public List<JsonObject> convertAllToJson(List<Message> messages) {
         List<JsonObject> convertedObjects = new ArrayList<>();
         for (Message message : messages) {

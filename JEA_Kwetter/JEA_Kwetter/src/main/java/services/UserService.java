@@ -1,11 +1,15 @@
 package services;
 
+import com.mysql.jdbc.StringUtils;
 import dao.JPA.Interface.IUserDao;
 import dao.JPA.Interface.JPAKwetter;
-import domain.Account;
 import domain.User;
 
 import javax.inject.Inject;
+import javax.json.JsonObject;
+import java.util.ArrayList;
+import java.util.List;
+import utils.EncryptionHelper;
 
 public class UserService {
 
@@ -21,5 +25,34 @@ public class UserService {
 
     public void remove(User user){this.userDao.delete(user);}
 
-    public User findByName(String userName){return this.userDao.findUserByName(userName);}
+    public User findByName(String username){return this.userDao.findUserByName(username);}
+
+    public ArrayList<User> getAllUsers(){ return this.userDao.getAllObjects();}
+
+    public List<JsonObject> convertAllToJson(List<User> users){
+        List<JsonObject> convertedObjects = new ArrayList<>();
+        for (User user : users) {
+            convertedObjects.add(user.convertToJson());
+        }
+        return convertedObjects;
+    }
+
+    public User findByCredentials(String username, String password) {
+        if (!StringUtils.isNullOrEmpty(username) && !StringUtils.isNullOrEmpty(password)) {
+            return this.userDao.findByCredentials(username, EncryptionHelper.encryptPassword(username, password));
+        }
+        return null;
+    }
+
+    public User login(String username, String password) {
+        if (!StringUtils.isNullOrEmpty(username) && !StringUtils.isNullOrEmpty(password)) {
+            String lowerCaseUsername = username.toLowerCase();
+            lowerCaseUsername = lowerCaseUsername.trim();
+
+            User possibleUser = this.findByCredentials(lowerCaseUsername, password);
+
+            if (possibleUser != null) return possibleUser;
+        }
+        return null;
+    }
 }

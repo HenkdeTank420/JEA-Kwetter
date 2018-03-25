@@ -6,8 +6,7 @@ import dao.JPA.Interface.JPAKwetter;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import java.util.ArrayList;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 @Stateless
@@ -19,15 +18,25 @@ public class GenericDao<T> implements IGenericDao<T> {
 
     private Class<T> type;
 
+    public GenericDao() {
+        ParameterizedType genericSuperClass = (ParameterizedType) getClass().getGenericSuperclass();
+        this.type = (Class<T>) genericSuperClass.getActualTypeArguments()[0];
+    }
+
     @Override
     public T add(T object) {
-        em.persist(object);
+        this.em.persist(object);
         return object;
     }
 
     @Override
-    public void delete(T object) {
-        em.remove(object);
+    public void delete(T t) {
+        t = em.merge(t);
+        em.remove(t);
+    }
+
+    public void deleteById(Long id) {
+        this.delete(findById(id));
     }
 
     @Override
@@ -38,6 +47,14 @@ public class GenericDao<T> implements IGenericDao<T> {
     @Override
     public T findObject(T object) {
         return em.find(type, object);
+    }
+
+    public EntityManager getEm() {
+        return em;
+    }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
     }
 
 }
