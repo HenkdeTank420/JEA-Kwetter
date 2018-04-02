@@ -10,14 +10,9 @@ import javax.inject.Named;
 import java.io.IOException;
 import java.io.Serializable;
 
-/**
- * @author Thom van de Pas on 23-3-2018
- */
 @Named("loginBean")
 @ViewScoped
 public class LoginBean implements Serializable {
-
-
     @Inject
     private UserService userService;
     @Inject
@@ -25,6 +20,7 @@ public class LoginBean implements Serializable {
 
     private String username;
     private String password;
+
 
     public void login() {
         String username = this.username.toLowerCase();
@@ -34,7 +30,7 @@ public class LoginBean implements Serializable {
             if (user != null) {
                 sessionBean.setLoggedInUser(user);
                 try {
-                    FacesContext.getCurrentInstance().getExternalContext().redirect("profile.xhtml?faces-redirect=true");
+                    FacesContext.getCurrentInstance().getExternalContext().redirect("/JEA_Kwetter/profile.xhtml");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -42,7 +38,6 @@ public class LoginBean implements Serializable {
         }
     }
 
-    //<editor-fold desc="Getters/Setters">
     public String getUsername() {
         return username;
     }
@@ -58,6 +53,6 @@ public class LoginBean implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-    //</editor-fold>
 }
+
 

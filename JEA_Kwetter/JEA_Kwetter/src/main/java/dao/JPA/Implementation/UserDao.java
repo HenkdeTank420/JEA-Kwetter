@@ -12,7 +12,7 @@ import java.util.List;
 
 @Stateless
 @JPAKwetter
-public class UserDao extends GenericDao<User> implements IUserDao{
+public class UserDao extends GenericDao<User> implements IUserDao {
 
     public User findUserByName(String userName) {
         TypedQuery<User> query = em.createNamedQuery("user.findByName", User.class);
@@ -27,11 +27,11 @@ public class UserDao extends GenericDao<User> implements IUserDao{
         return new ArrayList<>(query.getResultList());
     }
 
-    public User findByCredentials(String username, String password) {
-        TypedQuery<User> query = em.createNamedQuery("user.findByCredentials", User.class)
+    public User findByCredentials(String username, String encryptedPassword) {
+        return em.createNamedQuery("user.findByCredentials", User.class)
                 .setParameter("username", username)
-                .setParameter("password", password);
-        List<User> result = query.getResultList();
-        return result.get(0);
+                .setParameter("password", encryptedPassword)
+                .getSingleResult();
     }
 }
+

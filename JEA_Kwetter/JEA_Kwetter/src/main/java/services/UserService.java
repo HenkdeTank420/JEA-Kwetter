@@ -5,12 +5,14 @@ import dao.JPA.Interface.IUserDao;
 import dao.JPA.Interface.JPAKwetter;
 import domain.User;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.json.JsonObject;
 import java.util.ArrayList;
 import java.util.List;
 import utils.EncryptionHelper;
 
+@Stateless
 public class UserService {
 
     @Inject
@@ -27,6 +29,13 @@ public class UserService {
 
     public User findByName(String username){return this.userDao.findUserByName(username);}
 
+    public User findByCredentials(String username, String password) {
+        if (!StringUtils.isNullOrEmpty(username) && !StringUtils.isNullOrEmpty(password)) {
+            return this.userDao.findByCredentials(username, EncryptionHelper.encryptPassword(username, password));
+        }
+        return null;
+    }
+
     public ArrayList<User> getAllUsers(){ return this.userDao.getAllObjects();}
 
     public List<JsonObject> convertAllToJson(List<User> users){
@@ -35,13 +44,6 @@ public class UserService {
             convertedObjects.add(user.convertToJson());
         }
         return convertedObjects;
-    }
-
-    public User findByCredentials(String username, String password) {
-        if (!StringUtils.isNullOrEmpty(username) && !StringUtils.isNullOrEmpty(password)) {
-            return this.userDao.findByCredentials(username, EncryptionHelper.encryptPassword(username, password));
-        }
-        return null;
     }
 
     public User login(String username, String password) {

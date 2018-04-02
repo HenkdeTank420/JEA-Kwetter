@@ -8,7 +8,6 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,30 +42,18 @@ public class UserEndpoint {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createUser(User user) {
+    public User createUser(User user) {
         if (user == null) {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
         userService.create(user);
-        URI id = URI.create(user.getUsername());
-        return Response.created(id).build();
-    }
-
-    @POST
-    @Path("test")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String addMessage() {
-        return "Post works!";
+        return user;
     }
 
     @DELETE
-    public Response deleteAccount() {
-        User userToRemove = userService.findByName("Koen");
-
-        if (userToRemove == null) {
-            throw new WebApplicationException(Response.Status.NOT_FOUND);
-        }
-
+    @Path("{Username}")
+    public Response deleteAccount(@PathParam("Username") String username) {
+        User userToRemove = userService.findByName(username);
         userService.remove(userToRemove);
         return Response.noContent().build();
     }

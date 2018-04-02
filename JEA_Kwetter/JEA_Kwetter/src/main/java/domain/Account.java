@@ -4,14 +4,13 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "account.findFollowers", query = "SELECT a.Followers FROM Account a WHERE a.user.Username = :Username"),
-        @NamedQuery(name = "account.findFollowees", query = "SELECT a.Followees FROM Account a WHERE a.user.Username = :Username"),
-        @NamedQuery(name = "account.findByName", query = "SELECT a FROM Account a WHERE a.user.Username = :Username")})
+        @NamedQuery(name = "account.findFollowers", query = "SELECT a.Followers FROM Account a WHERE a.user.username = :Username"),
+        @NamedQuery(name = "account.findFollowees", query = "SELECT a.Followees FROM Account a WHERE a.user.username = :Username"),
+        @NamedQuery(name = "account.findByName", query = "SELECT a FROM Account a WHERE a.user.username = :Username")})
 public class Account implements Serializable{
 
     @Id
