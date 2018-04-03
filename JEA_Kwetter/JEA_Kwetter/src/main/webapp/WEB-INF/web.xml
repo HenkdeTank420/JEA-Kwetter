@@ -26,23 +26,28 @@
     </welcome-file-list>
 
     <security-constraint>
+        <display-name>User</display-name>
         <web-resource-collection>
             <web-resource-name>Secure Pages</web-resource-name>
-            <description/>
-            <url-pattern>/JEA_Kwetter/profile.xhtml</url-pattern>
+            <description>user</description>
+            <url-pattern>/profile.xhtml</url-pattern>
         </web-resource-collection>
         <auth-constraint>
+            <description/>
             <role-name>regular_role</role-name>
             <role-name>admin_role</role-name>
         </auth-constraint>
     </security-constraint>
 
     <security-constraint>
+        <display-name>User</display-name>
         <web-resource-collection>
             <web-resource-name>Secure Pages Admin</web-resource-name>
-            <url-pattern>/JEA_Kwetter/admin.xhtml</url-pattern>
+            <description>admin</description>
+            <url-pattern>/admin.xhtml</url-pattern>
         </web-resource-collection>
         <auth-constraint>
+            <description/>
             <role-name>admin_role</role-name>
         </auth-constraint>
     </security-constraint>

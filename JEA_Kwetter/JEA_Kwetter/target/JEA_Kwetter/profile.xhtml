@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Welcome, #{sessionBean.loggedInUser.username}"/>
-</f:view>
-</html>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                      xmlns:h="http://xmlns.jcp.org/jsf/html"
+                      xmlns:ui="http://java.sun.com/jsf/facelets"
+                      xmlns:f="http://xmlns.jcp.org/jsf/core"
+                      xmlns:p="http://primefaces.org/ui"
+                template="/template/template.xhtml">
+
+    <ui:define name="content">
+        <h:form>
+            <p:growl id="growl" showDetail="true"/>
+
+            <div id="content">
+                <p:panelGrid columns="2">
+                <h:outputLabel value="Welcome, #{sessionBean.loggedInUser.username}"/>
+                </p:panelGrid>
+                <p:commandButton value="Uitloggen" actionListener="#{sessionBean.logout}" update="growl"/>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
