@@ -6,13 +6,8 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table(name = "HelloUser")
@@ -30,7 +25,6 @@ public class User implements Serializable {
     @JsonProperty("username")
     private String username;
 
-    @Size(min = 6)
     @JsonProperty("password")
     private String password;
 

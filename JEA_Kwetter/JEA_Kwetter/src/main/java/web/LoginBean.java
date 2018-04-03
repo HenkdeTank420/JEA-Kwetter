@@ -13,6 +13,7 @@ import java.io.Serializable;
 @Named("loginBean")
 @ViewScoped
 public class LoginBean implements Serializable {
+
     @Inject
     private UserService userService;
     @Inject
@@ -21,6 +22,8 @@ public class LoginBean implements Serializable {
     private String username;
     private String password;
 
+    public void init() {
+    }
 
     public void login() {
         String username = this.username.toLowerCase();

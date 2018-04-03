@@ -8,39 +8,45 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
+
     <welcome-file-list>
         <welcome-file>login.xhtml</welcome-file>
     </welcome-file-list>
 
-
-<description/>
-
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Secure Pages</web-resource-name>
-            <description>account</description>
-            <url-pattern>/*</url-pattern>
+            <description/>
+            <url-pattern>/JEA_Kwetter/profile.xhtml</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <description/>
             <role-name>regular_role</role-name>
+            <role-name>admin_role</role-name>
         </auth-constraint>
     </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Secure Pages Admin</web-resource-name>
+            <url-pattern>/JEA_Kwetter/admin.xhtml</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin_role</role-name>
+        </auth-constraint>
+    </security-constraint>
+
     <login-config>
         <auth-method>BASIC</auth-method>
         <realm-name>security_realm</realm-name>
@@ -49,5 +55,8 @@
         <description/>
         <role-name>regular_role</role-name>
     </security-role>
-
+    <security-role>
+        <description/>
+        <role-name>admin_role</role-name>
+    </security-role>
 </web-app>
