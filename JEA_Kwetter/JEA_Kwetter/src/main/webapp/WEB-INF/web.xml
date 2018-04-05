@@ -54,7 +54,7 @@
 
     <login-config>
         <auth-method>FORM</auth-method>
-        <realm-name>security_realm</realm-name>
+        <realm-name>kwetter_realm</realm-name>
     </login-config>
     <security-role>
         <description/>
