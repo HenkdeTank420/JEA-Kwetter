@@ -1,5 +1,6 @@
 package utils;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.jasypt.util.text.StrongTextEncryptor;
 
 import java.security.MessageDigest;
@@ -15,23 +16,16 @@ public final class EncryptionHelper {
 
     public static String encryptString(String data) {
         String saltedData = saltData(data);
-        return encryptData(saltedData, true);
+        return encryptData(saltedData);
     }
 
     public static String encryptPassword(String username, String password) {
         String saltedPassword = saltData(username + password);
-        return encryptData(saltedPassword, false);
+        return encryptData(saltedPassword);
     }
 
-    private static String encryptData(String data, boolean url) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte[] bytes = md.digest(data.getBytes());
-            return url ? Base64.getUrlEncoder().encodeToString(bytes) : Base64.getEncoder().encodeToString(bytes);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return data;
+    public static String encryptData(String data) {
+        return DigestUtils.sha256Hex(data);
     }
 
     public static String encryptReversible(String value) {
@@ -48,6 +42,7 @@ public final class EncryptionHelper {
 
         return encryptor;
     }
+
 
     private static String saltData(String data) {
         return "Q4R@d8Lb2UP-qts%ndnVh_G7N-" + data;

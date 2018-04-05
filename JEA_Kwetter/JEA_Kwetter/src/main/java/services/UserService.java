@@ -27,7 +27,10 @@ public class UserService {
 
     public void remove(User user){this.userDao.delete(user);}
 
-    public User findByName(String username){return this.userDao.findUserByName(username);}
+    public User findByName(String username){
+        User user = this.userDao.findUserByName(username);
+        return user;
+    }
 
     public User findByCredentials(String username, String password) {
         if (!StringUtils.isNullOrEmpty(username) && !StringUtils.isNullOrEmpty(password)) {

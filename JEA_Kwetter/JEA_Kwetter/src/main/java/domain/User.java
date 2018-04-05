@@ -1,13 +1,17 @@
 package domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import utils.EncryptionHelper;
 
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "HelloUser")
@@ -21,11 +25,10 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(unique = true)
     @JsonProperty("username")
     private String username;
 
-    @JsonProperty("password")
+    @JsonIgnore
     private String password;
 
     @Email
@@ -33,24 +36,27 @@ public class User implements Serializable {
     private String email;
 
     @ManyToMany(mappedBy = "users")
-    private List<Group> groups;
-    // getters, setters, no‐arg constructor
+    private List<UserGroup> userGroups;
 
-    public User(){
-
+    public User() {
+        this.userGroups = new ArrayList<>();
     }
 
-    public User(String username, String password, String email){
+    public User(String username, String password, String email) {
         this.username = username;
-        this.password = password;
         this.email = email;
+        try {
+            this.password = EncryptionHelper.encryptData(password);
+        } catch (Exception ex) {
+            System.out.println("exception message = " + ex.getMessage());
+        }
     }
 
-    public JsonObject convertToJson(){
+    public JsonObject convertToJson() {
         return Json.createObjectBuilder()
-            .add("username", this.getUsername())
-            .add("email", this.getEmail())
-            .build();
+                .add("username", this.getUsername())
+                .add("email", this.getEmail())
+                .build();
     }
 
     public Long getId() {
@@ -74,7 +80,11 @@ public class User implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        try {
+            this.password = EncryptionHelper.encryptData(password);
+        } catch (Exception ex) {
+            System.out.println("exception message = " + ex.getMessage());
+        }
     }
 
     public String getEmail() {
@@ -85,11 +95,28 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public List<Group> getGroups() {
-        return groups;
+    public List<UserGroup> getUserGroups() {
+        return userGroups;
     }
 
-    public void setGroups(List<Group> groups) {
-        this.groups = groups;
+    public void setUserGroups(List<UserGroup> userGroups) {
+        this.userGroups = userGroups;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(Id, user.Id) &&
+                Objects.equals(username, user.username) &&
+                Objects.equals(email, user.email);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.Id);
+        return hash;
     }
 }

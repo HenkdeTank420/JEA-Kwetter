@@ -2,12 +2,14 @@ package web;
 
 import domain.User;
 import services.UserService;
+import utils.RedirectHelper;
 
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import java.io.Serializable;
 
 @Named("loginBean")
@@ -28,18 +30,25 @@ public class LoginBean implements Serializable {
     public void login() {
         String username = this.username.toLowerCase();
 
-        if (sessionBean.getLoggedInUser() == null) {
-            User user = this.userService.login(username, this.password);
-            if (user != null) {
-                sessionBean.setLoggedInUser(user);
-                try {
-                    FacesContext.getCurrentInstance().getExternalContext().redirect("/JEA_Kwetter/profile.xhtml");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+        FacesContext context = FacesContext.getCurrentInstance();
+        HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
+
+        try {
+            request.login(username, this.password);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        }
+
+        User user = this.userService.findByName(request.getRemoteUser());
+        sessionBean.setLoggedInUser(user);
+
+        boolean isRegular = request.isUserInRole("regulars");
+
+        if (isRegular) {
+            RedirectHelper.redirect("/profile.xhtml");
         }
     }
+
 
     public String getUsername() {
         return username;
