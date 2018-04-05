@@ -1,7 +1,10 @@
 package domain;
 
+import org.eclipse.persistence.jpa.config.Cascade;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,7 +13,7 @@ public class UserGroup implements Serializable {
     @Id
     private String groupName;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name="USER_GROUP",
             joinColumns = @JoinColumn(name = "groupName",
                     referencedColumnName = "groupname"),
@@ -20,10 +23,11 @@ public class UserGroup implements Serializable {
     // getters, setters, no‐arg constructor
 
     public UserGroup(){
-
+        this.users = new ArrayList<>();
     }
 
     public UserGroup(String groupName) {
+        this();
         this.groupName = groupName;
     }
 

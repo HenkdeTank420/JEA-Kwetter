@@ -35,7 +35,7 @@ public class User implements Serializable {
     @JsonProperty("email")
     private String email;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "users")
     private List<UserGroup> userGroups;
 
     public User() {

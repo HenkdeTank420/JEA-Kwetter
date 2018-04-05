@@ -42,7 +42,7 @@ public class LoginBean implements Serializable {
         User user = this.userService.findByName(request.getRemoteUser());
         sessionBean.setLoggedInUser(user);
 
-        boolean isRegular = request.isUserInRole("regulars");
+        boolean isRegular = request.isUserInRole("regular_role");
 
         if (isRegular) {
             RedirectHelper.redirect("/profile.xhtml");
