@@ -15,13 +15,34 @@
 
             <div id="content">
                 <p:panelGrid columns="2">
-                    <h:outputLabel for="username" value="Username"/>
-                    <p:inputText id="username" value="#{loginBean.username}"/>
 
-                    <h:outputLabel for="password" value="Password"/>
-                    <p:password id="password" value="#{loginBean.password}"/>
+                    <div class="form-group">
+                    <p:inputText
+                            id="username"
+                            placeholder="username"
+                            required="true"
+                            requiredMessage="Fill in your username"
+                            styleClass="form-control"
+                            value="#{loginBean.username}"/>
+                    </div>
+
+                    <div class="form-group">
+                    <p:password id="password"
+                                placeholder="password"
+                                required="true"
+                                requiredMessage="Fill in your password"
+                                styleClass="form-control"
+                                value="#{loginBean.password}"/>
+                    </div>
+
+                    <div class="form-group">
+                    <p:commandButton
+                            value="Inloggen"
+                            actionListener="#{loginBean.login}"
+                            update="growl"/>
+                    </div>
                 </p:panelGrid>
-                <p:commandButton value="Inloggen" actionListener="#{loginBean.login}" update="growl"/>
+
             </div>
         </h:form>
     </ui:define>

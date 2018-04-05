@@ -6,15 +6,32 @@
                       xmlns:p="http://primefaces.org/ui"
                 template="/template/template.xhtml">
 
+    <ui:include src="/template/header.xhtml"/>
     <ui:define name="content">
         <h:form>
             <p:growl id="growl" showDetail="true"/>
 
-            <div id="content">
-                <p:panelGrid columns="2">
-                <h:outputLabel value="Welcome, #{sessionBean.loggedInUser.username}"/>
-                </p:panelGrid>
-                <p:commandButton value="Uitloggen" actionListener="#{sessionBean.logout}" update="growl"/>
+            <ui:define name="title">Profile page</ui:define>
+
+            <div class="container">
+                <header class="header">
+                    <h:outputLabel value="Welcome Kwetter user!, #{sessionBean.loggedInUser.username}"/>
+                    <h5 class="text-muted">This is your profile</h5>
+                </header>
+
+                <h:outputLabel
+                        value="#{accountBean.account.bio}"/>
+
+                <h:outputLabel
+                    value="#{accountBean.account.location}"/>
+
+                <h:outputLabel
+                    value="#{accountBean.account.web}"/>
+
+                <p:commandButton
+                        value="Uitloggen"
+                        actionListener="#{sessionBean.logout}"
+                        update="growl"/>
             </div>
         </h:form>
     </ui:define>
