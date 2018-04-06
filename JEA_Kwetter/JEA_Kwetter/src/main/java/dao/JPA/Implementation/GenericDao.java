@@ -30,6 +30,11 @@ public class GenericDao<T> implements IGenericDao<T> {
     }
 
     @Override
+    public T update(T t) {
+        return this.em.merge(t);
+    }
+
+    @Override
     public void delete(T t) {
         t = em.merge(t);
         em.remove(t);

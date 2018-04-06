@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "HelloUser")
+@Table
 @NamedQueries({
         @NamedQuery(name = "user.findByName", query = "SELECT u FROM User u WHERE u.username = :Username"),
         @NamedQuery(name = "user.findByCredentials", query = "SELECT u FROM User u " +

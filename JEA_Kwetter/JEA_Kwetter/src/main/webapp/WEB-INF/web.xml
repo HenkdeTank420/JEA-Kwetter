@@ -30,7 +30,7 @@
         <web-resource-collection>
             <web-resource-name>Secure Pages</web-resource-name>
             <description>user</description>
-            <url-pattern>/profile.xhtml</url-pattern>
+            <url-pattern>/pages/profile/profile.xhtml</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <description/>
@@ -44,7 +44,7 @@
         <web-resource-collection>
             <web-resource-name>Secure Pages Admin</web-resource-name>
             <description>admin</description>
-            <url-pattern>/admin.xhtml</url-pattern>
+            <url-pattern>/pages/admin/admin.xhtml</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <description/>

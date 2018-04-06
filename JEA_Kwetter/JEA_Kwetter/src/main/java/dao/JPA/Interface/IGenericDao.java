@@ -5,6 +5,8 @@ public interface IGenericDao<T> {
 
     T add(T object);
 
+    T update(T t);
+
     void delete(T object);
 
     void deleteById(Long id);

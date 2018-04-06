@@ -1,14 +1,14 @@
 package domain;
 
-import org.eclipse.persistence.jpa.config.Cascade;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "HelloGroup")
+@Table
+@NamedQueries({
+        @NamedQuery(name = "userGroup.findByGroupName", query = "SELECT ug FROM UserGroup ug WHERE ug.groupName = :groupName"),})
 public class UserGroup implements Serializable {
     @Id
     private String groupName;

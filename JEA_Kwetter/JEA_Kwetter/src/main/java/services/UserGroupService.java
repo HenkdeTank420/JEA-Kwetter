@@ -18,4 +18,12 @@ public class UserGroupService {
 
     }
     public UserGroup create(UserGroup userGroup){ return this.groupDao.add(userGroup);}
+
+    public UserGroup findByGroupName(String groupName) {
+        return this.groupDao.findUserByName(groupName);
+    }
+
+    public UserGroup update(UserGroup userGroup) {
+        return this.groupDao.update(userGroup);
+    }
 }
