@@ -2,7 +2,6 @@ package services;
 
 import dao.JPA.Interface.ITrendDao;
 import domain.Trend;
-import org.eclipse.persistence.annotations.TenantTableDiscriminator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
