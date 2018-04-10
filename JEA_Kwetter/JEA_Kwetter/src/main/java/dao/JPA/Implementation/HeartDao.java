@@ -2,13 +2,11 @@ package dao.JPA.Implementation;
 
 import dao.JPA.Interface.IHeartsDao;
 import dao.JPA.Interface.JPAKwetter;
-import domain.Account;
 import domain.Heart;
 import domain.Message;
 
 import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
-import java.util.ArrayList;
 import java.util.List;
 
 @Stateless

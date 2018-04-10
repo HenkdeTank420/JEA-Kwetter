@@ -1,6 +1,5 @@
 package services;
 
-import dao.JPA.Implementation.MessageDao;
 import dao.JPA.Interface.IMessageDao;
 import dao.JPA.Interface.JPAKwetter;
 import domain.Account;

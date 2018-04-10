@@ -27,7 +27,7 @@ public class UserEndpoint {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response getAccount(@PathParam("Username") String name) {
         User user = userService.findByName(name);
-        return Response.ok(user.convertToJson()).build();
+        return Response.ok(user.convertToJson()).header("Access-Control-Allow-Origin", "*").build();
     }
 
     @GET
@@ -36,7 +36,7 @@ public class UserEndpoint {
     public Response getAll() {
         List<User> users = new ArrayList<User>(userService.getAllUsers()) {
         };
-        return Response.ok(userService.convertAllToJson(users)).build();
+        return Response.ok(userService.convertAllToJson(users)).header("Access-Control-Allow-Origin", "*").build();
     }
 
     @POST
@@ -55,6 +55,6 @@ public class UserEndpoint {
     public Response deleteAccount(@PathParam("Username") String username) {
         User userToRemove = userService.findByName(username);
         userService.remove(userToRemove);
-        return Response.noContent().build();
+        return Response.noContent().header("Access-Control-Allow-Origin", "*").build();
     }
 }
