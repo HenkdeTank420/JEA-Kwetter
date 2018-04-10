@@ -3,19 +3,16 @@ package web;
 import domain.Account;
 import domain.User;
 import domain.UserGroup;
-import org.omnifaces.util.Ajax;
 import services.AccountService;
 import services.UserGroupService;
 import services.UserService;
 import utils.RedirectHelper;
 
 import javax.annotation.PostConstruct;
-import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.util.List;
 
 @Named("userBean")
 @ViewScoped
