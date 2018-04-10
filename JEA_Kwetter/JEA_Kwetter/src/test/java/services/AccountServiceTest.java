@@ -3,6 +3,7 @@ package services;
 import dao.JPA.Interface.IAccountDao;
 import domain.Account;
 import domain.User;
+import services.AccountService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
