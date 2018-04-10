@@ -12,6 +12,7 @@
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>8.0</version>
+            <scope>provided</scope>
         </dependency>
 
         <!--Testing-->
@@ -120,6 +121,21 @@
 
     </dependencies>
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
         <finalName>JEA_Kwetter</finalName>
     </build>
     <properties>
