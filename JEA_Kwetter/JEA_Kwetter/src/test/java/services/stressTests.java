@@ -14,7 +14,7 @@ public class stressTests {
 
     }
 
-    @Test
+    @Test(timeout = 1000)
     public void HashingStressTest() {
         for(int i = 0; i < 1000000; i++){
             EncryptionHelper.encryptData("Nyello");
