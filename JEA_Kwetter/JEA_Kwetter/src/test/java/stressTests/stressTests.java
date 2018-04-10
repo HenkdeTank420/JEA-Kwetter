@@ -11,7 +11,7 @@ public class stressTests {
 
     @Test
     public void HashingStressTest() throws InvalidKeyException{
-        for(int i = 0; i < 100; i++){
+        for(int i = 0; i < 1000000; i++){
             EncryptionHelper.encryptData("Nyello");
         }
         Assert.assertTrue(true);
