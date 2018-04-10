@@ -21,19 +21,19 @@ public class AccountRestTest extends BaseRestTest {
 
     @Test
     public void verifyNameStructured() {
-        given().when().get("/api/account/Violet").then()
-                .body("username",equalTo("Violet"));
+        given().when().get("/api/account/violet").then()
+                .body("username",equalTo("violet"));
     }
 
     @Test
     public void getAllFollowersOfAccount() {
-        given().when().get("/api/account/followers/Violet").then()
-                .body("username",equalTo("Thomas"));
+        given().when().get("/api/account/followers/violet").then()
+                .body("username",equalTo("thomas"));
     }
 
     @Test
     public void getAllFolloweesOfAccount() {
-        given().when().get("/api/account/followees/Violet").then()
-                .body("username",equalTo("Thomas"));
+        given().when().get("/api/account/followees/violet").then()
+                .body("username",equalTo("thomas"));
     }
 }
