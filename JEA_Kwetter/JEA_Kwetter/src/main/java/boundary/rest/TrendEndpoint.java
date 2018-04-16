@@ -26,7 +26,7 @@ public class TrendEndpoint extends Application {
     public Response getAll() {
         List<Trend> trends = new ArrayList<Trend>(trendService.getAllTrends()) {
         };
-        return Response.ok(trendService.convertAllToJson(trends)).build();
+        return Response.ok(trendService.convertAllToJson(trends)).header("Access-Control-Allow-Origin", "*").build();
     }
 
     @GET
@@ -34,6 +34,6 @@ public class TrendEndpoint extends Application {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response getAccount(@PathParam("name") String name) {
         Trend account = trendService.getTrendByName(name);
-        return Response.ok(account.convertToJson()).build();
+        return Response.ok(account.convertToJson()).header("Access-Control-Allow-Origin", "*").build();
     }
 }

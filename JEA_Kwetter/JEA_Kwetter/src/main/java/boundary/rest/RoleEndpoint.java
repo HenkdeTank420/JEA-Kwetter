@@ -26,7 +26,7 @@ public class RoleEndpoint extends Application {
     public Response getAll() {
         List<Role> roles = new ArrayList<Role>(roleService.getAllRoles()) {
         };
-        return Response.ok(roleService.convertAllToJson(roles)).build();
+        return Response.ok(roleService.convertAllToJson(roles)).header("Access-Control-Allow-Origin", "*").build();
     }
 
     @GET
@@ -34,6 +34,6 @@ public class RoleEndpoint extends Application {
     @Produces({MediaType.APPLICATION_JSON})
     public Response getMessageOfAccount(@PathParam("name") String name) {
         List<Role> roles = new ArrayList<Role>(roleService.getAllAccountsWithRole(name)){};
-        return Response.ok(roleService.convertAllToJson(roles)).build();
+        return Response.ok(roleService.convertAllToJson(roles)).header("Access-Control-Allow-Origin", "*").build();
     }
 }

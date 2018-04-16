@@ -30,8 +30,6 @@ public class RoleService {
 
     public List<Role> getAllAccountsWithRole(String roleName){return this.roleDao.getAccountsWithRole(roleName);}
 
-    public void addAccountToRole(Account account, Role role){this.roleDao.addAccountToRole(account, role);}
-
     public List<JsonObject> convertAllToJson(List<Role> roles) {
         List<JsonObject> convertedObjects = new ArrayList<>();
         for (Role role : roles) {

@@ -26,7 +26,7 @@ public class HeartEndpoint extends Application {
     @Produces({MediaType.APPLICATION_JSON})
     public Response getHeartsOfMessage(@PathParam("id") Long id) {
         List<Heart> hearts = new ArrayList<Heart>(heartService.getAllHeartsOfMessage(id)){};
-        return Response.ok(heartService.convertAllToJson(hearts)).build();
+        return Response.ok(heartService.convertAllToJson(hearts)).header("Access-Control-Allow-Origin", "*").build();
     }
 
     @GET
@@ -34,6 +34,6 @@ public class HeartEndpoint extends Application {
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAccountsThatGaveHeartsOfMessage(@PathParam("id") Long id) {
         List<Heart> hearts = new ArrayList<Heart>(heartService.getAllHeartedAccountsOfMessage(id)){};
-        return Response.ok(heartService.convertAllToJson(hearts)).build();
+        return Response.ok(heartService.convertAllToJson(hearts)).header("Access-Control-Allow-Origin", "*").build();
     }
 }

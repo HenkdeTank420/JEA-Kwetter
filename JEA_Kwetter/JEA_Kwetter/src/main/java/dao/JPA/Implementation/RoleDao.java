@@ -22,15 +22,6 @@ public class RoleDao extends GenericDao<Role> implements IRoleDao {
         return result;
     }
 
-    public void addAccountToRole(Account account, Role role){
-        ArrayList<Account> accounts = new ArrayList<>();
-        accounts.add(account);
-        role.setAccountsWithThisRole(accounts);
-        em.persist(role);
-        account.setRole(role);
-        em.persist(account);
-    }
-
     public ArrayList<Role> getAllObjects() {
         Query query = em.createQuery("SELECT a FROM Role a");
         return new ArrayList<>(query.getResultList());

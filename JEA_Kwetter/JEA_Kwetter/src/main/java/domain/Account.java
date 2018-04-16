@@ -32,11 +32,8 @@ public class Account implements Serializable{
 
     private String Bio;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.DETACH)
     private List<Message> messages;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    private Role role;
 
     public Account(){
 
@@ -59,7 +56,6 @@ public class Account implements Serializable{
                 .add("location", this.Location)
                 .add("bio", this.Bio)
                 .add("messages", this.messages.size())
-                .add("role", this.role.getId())
                 .build();
     }
 
@@ -126,13 +122,4 @@ public class Account implements Serializable{
     public void setMessages(List<Message> messages) {
         this.messages = messages;
     }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
 }

@@ -16,13 +16,13 @@ public class Message implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
     private Account Owner;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.DETACH)
     private List<Account> Mentions;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "message")
+    @OneToMany(cascade = CascadeType.DETACH, mappedBy = "message")
     private List<Trend> Trends;
 
     private String Text;
