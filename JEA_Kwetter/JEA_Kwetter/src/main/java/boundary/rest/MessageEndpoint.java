@@ -3,6 +3,7 @@ package boundary.rest;
 import domain.Account;
 import domain.Message;
 import org.springframework.web.bind.annotation.ResponseBody;
+import services.AccountService;
 import services.MessageService;
 
 import javax.ejb.Stateless;
@@ -21,6 +22,8 @@ public class MessageEndpoint extends Application {
 
     @Inject
     MessageService messageService;
+    @Inject
+    AccountService accountService;
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
@@ -52,6 +55,8 @@ public class MessageEndpoint extends Application {
         if (message == null) {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
+        Account account = accountService.findByName(message.getUsername());
+        message.setOwner(account);
         messageService.create(message);
         return message;
     }

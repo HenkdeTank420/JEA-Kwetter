@@ -1,5 +1,7 @@
 package domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
@@ -9,7 +11,7 @@ import java.util.List;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "message.findMessageByName", query = "SELECT m FROM Message m WHERE m.Owner.user.username = :name"),
-        @NamedQuery(name = "message.findMessageByWord", query = "SELECT m FROM Message m WHERE m.Text = :word")})
+        @NamedQuery(name = "message.findMessageByWord", query = "SELECT m FROM Message m WHERE m.text = :word")})
 public class Message implements Serializable {
 
     @Id
@@ -19,13 +21,17 @@ public class Message implements Serializable {
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
     private Account Owner;
 
+    @JsonProperty("username")
+    private String username;
+
     @OneToMany(cascade = CascadeType.DETACH)
     private List<Account> Mentions;
 
     @OneToMany(cascade = CascadeType.DETACH, mappedBy = "message")
     private List<Trend> Trends;
 
-    private String Text;
+    @JsonProperty("text")
+    private String text;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Heart> Hearts;
@@ -36,7 +42,7 @@ public class Message implements Serializable {
 
     public Message(Account owner, String text){
         this.Owner = owner;
-        this.Text = text;
+        this.text = text;
     }
 
     public JsonObject convertToJson(){
@@ -45,8 +51,9 @@ public class Message implements Serializable {
                 .add("owner", this.Owner.getUser().getUsername())
                 .add("mentions", this.Mentions.size())
                 .add("trend", this.Trends.size())
-                .add("text", this.Text)
+                .add("text", this.text)
                 .add("hearts", this.Hearts.size())
+                .add("username", this.username)
                 .build();
     }
 
@@ -83,11 +90,11 @@ public class Message implements Serializable {
     }
 
     public String getText() {
-        return Text;
+        return text;
     }
 
     public void setText(String text) {
-        Text = text;
+        this.text = text;
     }
 
     public List<Heart> getHearts() {
@@ -96,5 +103,13 @@ public class Message implements Serializable {
 
     public void setHearts(List<Heart> hearts) {
         Hearts = hearts;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

@@ -7,46 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="132aa3b3-da88-40a6-a68d-907628bdaabf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/basic_jee_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/basic_jee_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/basic-jee.iml" afterPath="$PROJECT_DIR$/basic-jee.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/rest/AccountListEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/AccountListEndpoint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/rest/HeartEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/HeartEndpoint.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/rest/RoleEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/RoleEndpoint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/rest/TrendEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/TrendEndpoint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Account.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Account.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Message.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Message.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/RoleService.java" afterPath="$PROJECT_DIR$/src/main/java/services/RoleService.java" />
       <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter.war" afterPath="$PROJECT_DIR$/target/JEA_Kwetter.war" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint$1.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint$2.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint$3.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint$3.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/AccountListEndpoint.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint$1.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint$2.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint$3.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint$3.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/boundary/rest/MessageEndpoint.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/RoleDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Implementation/RoleDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IRoleDao.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/dao/JPA/Interface/IRoleDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Account.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/domain/Account.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/RoleService.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/RoleService.class" />
-      <change beforePath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/StartUp.class" afterPath="$PROJECT_DIR$/target/JEA_Kwetter/WEB-INF/classes/services/StartUp.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint$1.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint$2.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint$3.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint$3.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/AccountListEndpoint.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint$1.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint$2.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint$3.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint$3.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint.class" afterPath="$PROJECT_DIR$/target/classes/boundary/rest/MessageEndpoint.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/RoleDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Implementation/RoleDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IRoleDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/JPA/Interface/IRoleDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Account.class" afterPath="$PROJECT_DIR$/target/classes/domain/Account.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/RoleService.class" afterPath="$PROJECT_DIR$/target/classes/services/RoleService.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +37,8 @@
       <file leaf-file-name="UserEndpoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/UserEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="43" column="41" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="43" selection-end-column="41" />
+            <state relative-caret-position="189">
+              <caret line="18" column="28" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +49,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+            <state relative-caret-position="145">
+              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -95,8 +59,20 @@
       <file leaf-file-name="MessageEndpoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="474">
+              <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -105,9 +81,14 @@
       <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1134">
+              <caret line="93" column="5" lean-forward="false" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+              <folding>
+                <element signature="e#2597#2598#0" expanded="true" />
+                <element signature="e#2628#2629#0" expanded="true" />
+                <element signature="e#2676#2677#0" expanded="true" />
+                <element signature="e#2716#2717#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,18 +96,8 @@
       <file leaf-file-name="StartUp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/StartUp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeartEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/HeartEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="36" column="108" lean-forward="false" selection-start-line="36" selection-start-column="108" selection-end-line="36" selection-end-column="108" />
+            <state relative-caret-position="231">
+              <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -147,16 +118,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
               <caret line="36" column="94" lean-forward="false" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -239,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/test/java/rest_assured/AccountRestTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/rest_assured/UserRestTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/UserEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/StartUp.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/RoleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/JPA/Interface/IRoleDao.java" />
@@ -248,8 +208,9 @@
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/HeartEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/RoleEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/TrendEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/StartUp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java" />
       </list>
     </option>
   </component>
@@ -314,9 +275,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -448,6 +406,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -884,6 +845,9 @@
       <workItem from="1523450249076" duration="60000" />
       <workItem from="1523537099716" duration="18000" />
       <workItem from="1523788035416" duration="10042000" />
+      <workItem from="1523863420560" duration="482000" />
+      <workItem from="1523889662584" duration="721000" />
+      <workItem from="1523900547484" duration="5855000" />
     </task>
     <servers />
   </component>
@@ -920,7 +884,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250801000" />
+    <option name="totallyTimeSpent" value="257859000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -933,7 +897,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44746163" sideWeight="0.42910847" order="8" side_tool="true" content_ui="tabs" />
@@ -954,12 +917,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.49570355" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36363637" sideWeight="0.5708915" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36363637" sideWeight="0.5708915" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.49570355" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22126746" sideWeight="0.49295774" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22771214" sideWeight="0.49295774" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17937702" sideWeight="0.5070422" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1040,13 +1003,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/MessageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1128,21 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#781#782#0" expanded="false" />
-            <element signature="e#827#828#0" expanded="false" />
-            <element signature="e#963#964#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-            <element signature="e#1037#1038#0" expanded="false" />
-            <element signature="e#1071#1072#0" expanded="false" />
-            <element signature="e#1107#1108#0" expanded="false" />
-            <element signature="e#1139#1140#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="false" />
-            <element signature="e#1231#1232#0" expanded="false" />
-            <element signature="e#1269#1270#0" expanded="false" />
-            <element signature="e#1305#1306#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,7 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,7 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,15 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="46" column="73" lean-forward="false" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,10 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1869">
           <caret line="123" column="5" lean-forward="false" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
-          <folding>
-            <element signature="e#2881#2882#0" expanded="false" />
-            <element signature="e#2921#2922#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,7 +1255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,7 +1262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1345,13 +1269,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/GenericDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="504">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -1389,53 +1312,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/AccountListEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="26" column="112" lean-forward="false" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/StartUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/UserEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="43" column="41" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="43" selection-end-column="41" />
+        <state relative-caret-position="189">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/JPA/Implementation/MessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1008">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/StartUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/MessageEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="474">
+          <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1134">
+          <caret line="93" column="5" lean-forward="false" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+          <folding>
+            <element signature="e#2597#2598#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
+            <element signature="e#2676#2677#0" expanded="true" />
+            <element signature="e#2716#2717#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
