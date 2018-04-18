@@ -28,14 +28,14 @@ public class User implements Serializable {
     @JsonProperty("username")
     private String username;
 
-    @JsonIgnore
+    @JsonProperty("password")
     private String password;
 
     @Email
     @JsonProperty("email")
     private String email;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "users")
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER, mappedBy = "users")
     private List<UserGroup> userGroups;
 
     public User() {

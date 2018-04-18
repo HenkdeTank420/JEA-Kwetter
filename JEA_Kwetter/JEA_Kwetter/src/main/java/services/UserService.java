@@ -34,7 +34,7 @@ public class UserService {
 
     public User findByCredentials(String username, String password) {
         if (!StringUtils.isNullOrEmpty(username) && !StringUtils.isNullOrEmpty(password)) {
-            return this.userDao.findByCredentials(username, EncryptionHelper.encryptPassword(username, password));
+            return this.userDao.findByCredentials(username, password);
         }
         return null;
     }

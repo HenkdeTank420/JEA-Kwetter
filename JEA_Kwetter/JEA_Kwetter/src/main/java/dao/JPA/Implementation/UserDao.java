@@ -28,10 +28,11 @@ public class UserDao extends GenericDao<User> implements IUserDao {
     }
 
     public User findByCredentials(String username, String encryptedPassword) {
-        return em.createNamedQuery("user.findByCredentials", User.class)
-                .setParameter("username", username)
-                .setParameter("password", encryptedPassword)
-                .getSingleResult();
+        TypedQuery<User> query = em.createNamedQuery("user.findByCredentials", User.class);
+        query.setParameter("username", username)
+             .setParameter("password", encryptedPassword);
+        List<User> result = query.getResultList();
+        return result.get(0);
     }
 }
 

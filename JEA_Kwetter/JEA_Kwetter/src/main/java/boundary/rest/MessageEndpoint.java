@@ -48,23 +48,42 @@ public class MessageEndpoint extends Application {
         return Response.ok(messageService.convertAllToJson(messages)).header("Access-Control-Allow-Origin", "*").build();
     }
 
+    @OPTIONS
+    public Response optionsResponse(){
+        return Response.status(200).header("Allow","OPTIONS, POST, GET, DELETE").header("Access-Control-Allow-Origin", "*")
+                .header("Content-Type", MediaType.APPLICATION_JSON)
+                .header("Content-Length", "0")
+                .header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
+                .build();
+    }
+
+    @OPTIONS
+    @Path("{ID}")
+    public Response optionsDeleteResponse(){
+        return Response.status(200).header("Allow","OPTIONS, DELETE").header("Access-Control-Allow-Origin", "*")
+                .header("Content-Type", MediaType.APPLICATION_JSON)
+                .header("Content-Length", "0")
+                .header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
+                .build();
+    }
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Message createMessage(Message message) {
+    public Response createMessage(Message message) {
         if (message == null) {
-            throw new WebApplicationException(Response.Status.NOT_FOUND);
+            return Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
         }
         Account account = accountService.findByName(message.getUsername());
         message.setOwner(account);
         messageService.create(message);
-        return message;
+        return Response.ok().header("Access-Control-Allow-Origin", "*").build();
     }
 
     @DELETE
     @Path("{ID}")
     public Response deleteMessage(@PathParam("ID") Long ID) {
         messageService.delete(messageService.findById(ID));
-        return Response.noContent().header("Access-Control-Allow-Origin", "*").build();
+        return Response.ok().header("Access-Control-Allow-Origin", "*").build();
     }
 }
