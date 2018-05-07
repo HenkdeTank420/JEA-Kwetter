@@ -24,7 +24,11 @@ public class AccountListEndpoint extends Application{
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAll() {
         List<Account> accounts = new ArrayList<Account>(accountService.getAllAccounts()) { };
-        return Response.ok(accountService.convertAllToJson(accounts)).header("Access-Control-Allow-Origin", "*").build();
+        return Response.ok(accountService.convertAllToJson(accounts))
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Content-Length", "0")
+                .header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept, Authorization")
+                .build();
     }
 
     @GET
@@ -32,7 +36,11 @@ public class AccountListEndpoint extends Application{
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response getAccount(@PathParam("username") String name) {
         Account account = accountService.findByName(name);
-        return Response.ok(account.convertToJson()).header("Access-Control-Allow-Origin", "*").build();
+        return Response.ok(account.convertToJson())
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Content-Length", "0")
+                .header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept, Authorization")
+                .build();
     }
 
     @GET
@@ -40,7 +48,11 @@ public class AccountListEndpoint extends Application{
     @Produces({MediaType.APPLICATION_JSON})
     public Response getFollowersOfAccount(@PathParam("username") String name) {
         GenericEntity entity = new GenericEntity<List<Account>>(accountService.getAllFollowers(name)){};
-        return Response.ok(entity).header("Access-Control-Allow-Origin", "*").build();
+        return Response.ok(entity)
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Content-Length", "0")
+                .header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept, Authorization")
+                .build();
     }
 
     @GET
@@ -48,7 +60,11 @@ public class AccountListEndpoint extends Application{
     @Produces({MediaType.APPLICATION_JSON})
     public Response getFolloweesOfAccount(@PathParam("username") String name) {
         GenericEntity entity = new GenericEntity<List<Account>>(accountService.getAllFollowees(name)){};
-        return Response.ok(entity).header("Access-Control-Allow-Origin", "*").build();
+        return Response.ok(entity)
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Content-Length", "0")
+                .header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept, Authorization")
+                .build();
     }
 
 }
